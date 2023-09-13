@@ -1,0 +1,16 @@
+
+<?php 
+if($this->session->userdata('UserLoginSession'))
+{
+
+    $udata = $this->session->userdata('UserLoginSession');
+    echo 'Welcome'.' '.$udata['username'];
+
+}
+else
+{
+    redirect(base_url('index.php/frontend/login'));
+}
+?>
+ Welcome to Dashboard
+ <a href="<?=base_url('index.php/Frontend/logout')?>">Logout</a>
