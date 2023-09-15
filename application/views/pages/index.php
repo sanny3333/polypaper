@@ -236,7 +236,7 @@
             <div class="counter-one-wrap">
                 <div class="counter-one-shape"
                     style="background-image: url(<?php echo base_url();?>/assets/images/shapes/counter-one-shape.png)"></div>
-                <div class="counter-one-img"><img src="<?php echo base_url();?>/assets/images/resources/stat_img.jpg" alt=""></div>
+                <div class="counter-one-img mt-10"><img src="<?php echo base_url();?>/assets/images/resources/stat_img.jpg" alt=""></div>
                 <div class="counter-one-shape-2 wow slideInRight" data-wow-delay="100ms" data-wow-duration="2500ms"><img
                         src="<?php echo base_url();?>/assets/images/shapes/counter-one-shape-2.png" alt=""></div>
                 <div class="counter-one-shape-3"><img src="<?php echo base_url();?>/assets/images/shapes/counter-one-shape-3.png" alt=""></div>

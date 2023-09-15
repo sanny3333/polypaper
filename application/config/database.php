@@ -1,7 +1,10 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> de7b2833a630c45069334a0d6cc668b97f78dafa
 /*
 | -------------------------------------------------------------------
 | DATABASE CONNECTIVITY SETTINGS
@@ -77,9 +80,15 @@ $query_builder = TRUE;
 $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
+<<<<<<< HEAD
 	'username' => 'root',
 	'password' => '',
 	'database' => 'reg',
+=======
+	'username' => '',
+	'password' => '',
+	'database' => 'polypaper',
+>>>>>>> de7b2833a630c45069334a0d6cc668b97f78dafa
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
