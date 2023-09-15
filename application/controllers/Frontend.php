@@ -195,6 +195,10 @@ class Frontend extends CI_Controller {
 				redirect(base_url().'index.php/Frontend/login');
 			}
 		}
+		else{
+			echo"not";
+		}
+		
 	}
 
 	function login()
