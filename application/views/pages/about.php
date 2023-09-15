@@ -18,7 +18,7 @@
                         <div class="get-to-know__left">
                             <div class="section-title text-left">
                                 <span class="section-title__tagline">get to know us</span>
-                                <h2 class="section-title__title">Make environment plastic Free!!</h2>
+                                <h2 class="section-title__title">Handle with care,Plastic is everywhere!!</h2>
                             </div>
                             <p class="get-to-know__text">
                                 Plastic is used by all of humanity on a gigantic scale. The production and use of plastic have lowered the cost price of many products.
@@ -30,7 +30,7 @@ The detrimental side to plastic has just dawned upon us. Due to the huge amount 
                                         <i class="fa fa-check"></i>
                                     </div>
                                     <div class="text">
-                                        <p>In the financial year of 2019, the total demand for major plastics across India was approximately 16 million metric tons,.</p>
+                                        <p>In the financial year of 2021-2022, the total demand for major plastics across India was approximately 15 million metric tons.</p>
                                     </div>
                                 </li>
                                 <li>
@@ -46,7 +46,7 @@ The detrimental side to plastic has just dawned upon us. Due to the huge amount 
                                         <i class="fa fa-check"></i>
                                     </div>
                                     <div class="text">
-                                        <p>The Centre said that more than 34 lakh tons of plastic waste was generated in 2019-20 and 30.59 lakh tons in 2018-19 </p>
+                                        <p>Global plastics production was estimated at 400 million metric tons in 2021-22.</p>
                                     </div>
                                 </li>
                                
@@ -265,6 +265,7 @@ The detrimental side to plastic has just dawned upon us. Due to the huge amount 
                     </div>
                     <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="300ms">
                         <!--Team Two Single-->
+                        
                         <div class="team-one__single">
                             <div class="team-one__img">
                                 <img src="<?php echo base_url();?>/assets/images/team/team-one-img-3.jpg" alt="">
