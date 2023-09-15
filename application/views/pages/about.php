@@ -265,6 +265,7 @@ The detrimental side to plastic has just dawned upon us. Due to the huge amount 
                     </div>
                     <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="300ms">
                         <!--Team Two Single-->
+                        
                         <div class="team-one__single">
                             <div class="team-one__img">
                                 <img src="<?php echo base_url();?>/assets/images/team/team-one-img-3.jpg" alt="">
