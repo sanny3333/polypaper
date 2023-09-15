@@ -1,7 +1,5 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-
-
 /*
 | -------------------------------------------------------------------
 | DATABASE CONNECTIVITY SETTINGS
@@ -80,6 +78,9 @@ $db['default'] = array(
 	'username' => 'root',
 	'password' => '',
 	'database' => 'reg',
+	'username' => '',
+	'password' => '',
+	'database' => 'polypaper',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
