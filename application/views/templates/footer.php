@@ -9,8 +9,8 @@
                                 <div class="site-footer__top-logo-content">
                                     <a href="index.html"><img src="<?php echo base_url();?>/assets/images/logo-light-1.png" width="146"
                                             alt=""></a>
-                                    <p class="site-footer__top-text">Welcome to Polypaper 
-                                        </p>
+                                    <!-- <p class="site-footer__top-text">Welcome to Polypaper 
+                                        </p> -->
                                 </div>
                                 <div class="site-footer__top-newsletter">
                                     <h5 class="site-footer__top-newsletter-title">Subsrcibe for Latest Articles and
@@ -34,8 +34,8 @@
                                                 <ul class="footer-widget__explore-list list-unstyled clearfix">
                                                     <li><a href="<?php echo site_url();?>/frontend/about">About</a></li>
                                                     <li><a href="<?php echo site_url();?>/frontend/contact">Contact</a></li>
-                                                    <li><a href="<?php echo site_url();?>/frontend/blogs">blogs</a></li>
-                                                    <li><a href="<?php echo site_url();?>/frontend/products">products</a></li>
+                                                    <li><a href="<?php echo site_url();?>/frontend/blogs">Blogs</a></li>
+                                                    <li><a href="<?php echo site_url();?>/frontend/products">Products</a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -61,7 +61,7 @@
                                           </div>
                                     <div class="site-footer__top-right-phone">
                                         <p class="site-footer__top-right-phone-tagline">Call Anytime</p>
-                                        <a href="tel:+1 8328667421">+1 8328667421</a>
+                                        <a href="tel:+1 8328667421"></a>
                                     </div>
                                 </div>
                             </div>
