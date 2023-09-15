@@ -69,7 +69,13 @@
                     </div>
                 </div>
                 <div class="site-footer__bottom">
-                    <p class="site-footer__bottom-text">© 2022 Copyrights by <a href="#">silocloud</a></p>
+                    <p class="site-footer__bottom-text"><?php
+                        // Get the current year.
+                        $currentYear = date('Y');
+                      
+                        // Display the copyright year.
+                        echo '&copy; ' . $currentYear . ' Copyright By';
+                      ?> <a href="#">Polyapaper</a></p>
                 </div>
             </div>
         </footer>
