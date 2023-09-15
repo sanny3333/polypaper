@@ -120,7 +120,7 @@
                     <div class="col-xl-12">
                         <!-- <div class="about-one__right"> -->
                         <!-- <div class="section-title text-left"> -->
-                        <span class="section-title__tagline">Our Introductions</span>
+                        <span class="section-title__tagline">Our Introduction</span>
                         <h2 class="section-title__title">Process for the Polypaper</h2>
                         <!-- </div> -->
 
@@ -228,7 +228,7 @@
         <br>
         <div class="section-title text-center">
             <!-- <span class="section-title__tagline">our feedback list</span>   -->
-            <h2 class="section-title__title">Some statistics</h2>
+            <h2 class="section-title__title">Some Statistics</h2>
         </div>
 
 
@@ -258,7 +258,7 @@
                                             <span class="fa fa-trash"></span>
                                         </div>
                                         <div class="counter-one__content">
-                                            <h3 class="odometer" data-count="300">0</h3>
+                                            <h3 class="odometer" data-count="400">0</h3>
                                             <p class="counter-one__text">million tonnes of plastic waste produced</p>
                                         </div>
                                     </li>
@@ -267,7 +267,7 @@
                                             <span class="fa fa-recycle"></span>
                                         </div>
                                         <div class="counter-one__content">
-                                            <h3 class="odometer" data-count="27">0</h3>
+                                            <h3 class="odometer" data-count="36">0</h3>
                                             <p class="counter-one__text">million tonnes of plastic waste Recycled</p>
                                         </div>
                                     </li>
@@ -276,7 +276,7 @@
                                             <span class="far fa-file-alt"></span>
                                         </div>
                                         <div class="counter-one__content">
-                                            <h3 class="odometer" data-count="3">00</h3>
+                                            <h3 class="odometer" data-count="9">00</h3>
                                             <p class="counter-one__text">percent plastic used to make paper </p>
                                         </div>
                                     </li>
@@ -327,7 +327,7 @@
                             <!--News One Single-->
                             <div class="news-one__single">
                                 <div class="news-one__img">
-                                    <img src="<?php echo base_url();?>/assets/images/blog/blog2_card.jpg" alt="">
+                                    <img src="<?php echo base_url();?>/assets/images/blog/download.jpg" alt="">
                                     <a href="<?php echo site_url();?>/frontend/blog2">
                                         <span class="news-one__plus"></span>
                                     </a>
@@ -427,7 +427,7 @@
                             <!--News One Single-->
                             <div class="news-one__single">
                                 <div class="news-one__img">
-                                    <img src="<?php echo base_url();?>/assets/images/blog/blog2_card.jpg" alt="">
+                                    <img src="<?php echo base_url();?>/assets/images/blog/download.jpg" alt="">
                                     <a href="<?php echo site_url();?>/frontend/blog2">
                                         <span class="news-one__plus"></span>
                                     </a>
