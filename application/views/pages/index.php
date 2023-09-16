@@ -85,7 +85,7 @@
                     </div>
                 </div>
                 <!-- If we need navigation buttons -->
-                <div class="main-slider__nav">
+               <!--  <div class="main-slider__nav">
                     <div class="swiper-button-prev" id="main-slider__swiper-button-next">
                         <i class="icon-right-arrow icon-left-arrow"></i>
                     </div>
@@ -93,7 +93,7 @@
                         <i class="icon-right-arrow"></i>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </section>
         <!--Main Slider End-->
 
@@ -156,7 +156,7 @@
                         </div>
 
                         <div class="about-one__points-box">
-                            <b>Some Products</b>
+                            <!-- <b>Some Products</b> -->
                             <ul class="list-unstyled about-one__points">
                                 <li>
                                     <div class="icon">
@@ -236,7 +236,7 @@
             <div class="counter-one-wrap">
                 <div class="counter-one-shape"
                     style="background-image: url(<?php echo base_url();?>/assets/images/shapes/counter-one-shape.png)"></div>
-                <div class="counter-one-img "><img src="<?php echo base_url();?>/assets/images/resources/stat_img.jpg" alt=""></div>
+                <div class="counter-one-img "><img src="<?php echo base_url();?>/assets/images/resources/stat_img2.jpg" alt=""></div>
                 <div class="counter-one-shape-2 wow slideInRight" data-wow-delay="100ms" data-wow-duration="2500ms"><img
                         src="<?php echo base_url();?>/assets/images/shapes/counter-one-shape-2.png" alt=""></div>
                 <div class="counter-one-shape-3"><img src="<?php echo base_url();?>/assets/images/shapes/counter-one-shape-3.png" alt=""></div>
