@@ -39,7 +39,7 @@
                     </div>
                     <div class="swiper-slide">
                         <div class="image-layer"
-                            style="background-image: url(<?php echo base_url();?>/assets/images/backgrounds/main-slider-1-2.jpeg);">
+                            style="background-image: url(<?php echo base_url();?>/assets/images/backgrounds/main-slider-1-3.jpeg);">
                         </div>
                         <!-- /.image-layer -->
                         <div class="main-slider-shape-1"><img src="<?php echo base_url();?>/assets/images/shapes/main-slider-shape-1.png" alt="">
@@ -62,7 +62,7 @@
                     </div>
                     <div class="swiper-slide">
                         <div class="image-layer"
-                            style="background-image: url(<?php echo base_url();?>/assets/images/backgrounds/main-slider-1-2.jpeg);">
+                            style="background-image: url(<?php echo base_url();?>/assets/images/backgrounds/main-slider-1-4.jpeg);">
                         </div>
                         <!-- /.image-layer -->
                         <div class="main-slider-shape-1"><img src="<?php echo base_url();?>/assets/images/shapes/main-slider-shape-1.png" alt="">
@@ -236,7 +236,7 @@
             <div class="counter-one-wrap">
                 <div class="counter-one-shape"
                     style="background-image: url(<?php echo base_url();?>/assets/images/shapes/counter-one-shape.png)"></div>
-                <div class="counter-one-img mt-10"><img src="<?php echo base_url();?>/assets/images/resources/stat_img.jpg" alt=""></div>
+                <div class="counter-one-img "><img src="<?php echo base_url();?>/assets/images/resources/stat_img.jpg" alt=""></div>
                 <div class="counter-one-shape-2 wow slideInRight" data-wow-delay="100ms" data-wow-duration="2500ms"><img
                         src="<?php echo base_url();?>/assets/images/shapes/counter-one-shape-2.png" alt=""></div>
                 <div class="counter-one-shape-3"><img src="<?php echo base_url();?>/assets/images/shapes/counter-one-shape-3.png" alt=""></div>
@@ -327,7 +327,7 @@
                             <!--News One Single-->
                             <div class="news-one__single">
                                 <div class="news-one__img">
-                                    <img src="<?php echo base_url();?>/assets/images/blog/download.jpg" alt="">
+                                    <img src="<?php echo base_url();?>/assets/images/blog/blog2_card.jpg" alt="">
                                     <a href="<?php echo site_url();?>/frontend/blog2">
                                         <span class="news-one__plus"></span>
                                     </a>
@@ -427,7 +427,7 @@
                             <!--News One Single-->
                             <div class="news-one__single">
                                 <div class="news-one__img">
-                                    <img src="<?php echo base_url();?>/assets/images/blog/download.jpg" alt="">
+                                    <img src="<?php echo base_url();?>/assets/images/blog/blog2_card.jpg" alt="">
                                     <a href="<?php echo site_url();?>/frontend/blog2">
                                         <span class="news-one__plus"></span>
                                     </a>

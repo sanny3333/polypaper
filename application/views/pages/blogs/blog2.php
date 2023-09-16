@@ -20,7 +20,7 @@
                     <div class="col-xl-12 col-lg-11">
                         <div class="news-details__left">
                             <div class="news-details__img">
-                                <img src="<?php echo base_url();?>/assets/images/blog/download1.jpg" alt="">
+                                <img src="<?php echo base_url();?>/assets/images/blog/blog3_card.jpg" alt="">
                                 <div class="news-details__date-box">
                                     <p>20 Oct</p>
                                 </div>
