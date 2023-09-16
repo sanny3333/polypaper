@@ -50,14 +50,15 @@
                         <!--News One Single-->
                         <div class="news-one__single">
                             <div class="news-one__img">
-                                <img src="<?php echo base_url();?>/assets/images/product/product2_card.PNG" alt="">
+                                <img src="<?php echo base_url();?>/assets/images/product/product2.jpg" alt="">
                                 <a href="<?php echo site_url();?>/frontend/product2">
                                     <span class="news-one__plus"></span>
                                 </a>
                                
                             </div>
                             <div class="news-one__content">
-                                <ul class="list-unstyled news-one__meta">                                    </li>
+                                <ul class="list-unstyled news-one__meta">                       
+                                     </li>
                                 </ul>
                                 <h3 class="news-one__title">
                                     <a href="<?php echo site_url();?>/frontend/product2">Poly Coated Paper For Sugar Sachets Exporter</a>
@@ -75,7 +76,7 @@
                         <!--News One Single-->
                         <div class="news-one__single">
                             <div class="news-one__img">
-                                <img src="<?php echo base_url();?>/assets/images/product/product3_card.PNG" alt="">
+                                <img src="<?php echo base_url();?>/assets/images/product/product3.jpg" alt="">
                                 <a href="<?php echo site_url();?>/frontend/product3">
                                     <span class="news-one__plus"></span>
                                 </a>

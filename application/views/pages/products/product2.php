@@ -20,7 +20,7 @@
                     <div class="col-xl-12 col-lg-11">
                         <div class="news-details__left">
                             <div class="news-details__img">
-                                <img src="<?php echo base_url();?>/assets/images/product/product2.PNG" alt="">
+                                <img src="<?php echo base_url();?>/assets/images/product/product2_card.jpg" alt="">
                                 
                             </div>
                             <div class="news-details__content">
