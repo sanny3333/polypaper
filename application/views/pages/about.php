@@ -46,7 +46,7 @@ The detrimental side to plastic has just dawned upon us. Due to the huge amount 
                                         <i class="fa fa-check"></i>
                                     </div>
                                     <div class="text">
-                                        <p>Global plastics production was estimated at 400 million metric tons in 2021-22.</p>
+                                        <p> Global plastics production was estimated at 400 million metric tons in 2021-22.</p>
                                     </div>
                                 </li>
                                

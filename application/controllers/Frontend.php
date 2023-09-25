@@ -189,7 +189,7 @@ class Frontend extends CI_Controller {
 				);
 
 				$this->load->model('user_model');
-				$this->user_model->insertuser($data);
+				$this->user_model->insertuser('reg',$data);
 				$this->session->set_flashdata('success','Successfully User Created');
 				redirect(base_url().'index.php/Frontend/login');
 			}

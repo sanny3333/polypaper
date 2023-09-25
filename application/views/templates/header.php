@@ -68,7 +68,7 @@
                                 <li><a href="<?php echo site_url();?>/frontend/about">About</a></li>
                                 <li><a href="<?php echo site_url();?>/frontend/products">Products</a></li>
                                 <li><a href="<?php echo site_url();?>/frontend/blogs">Blogs</a></li>
-                                <li><a href="<?php echo site_url();?>/frontend/Giveacall">Give a call </a></li>
+                                <li><a href="<?php echo site_url();?>/frontend/Giveacall">Give a call</a></li>
                                 <li><a href="<?php echo site_url();?>/frontend/contact">Contact</a></li>
                                 <!-- <li><a href="news.html">News</a></li> -->
                             </ul>
