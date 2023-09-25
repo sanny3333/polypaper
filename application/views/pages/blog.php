@@ -61,7 +61,7 @@
                                 <ul class="list-unstyled news-one__meta">                                    </li>
                                 </ul>
                                 <h3 class="news-one__title">
-                                    <a href="Blogs/<?php echo site_url();?>/frontend/blog2">Bring to the table win-win survival</a>
+                                    <a href="Blogs/<?php echo site_url();?>/frontend/blog2">Bring to the table win-win survival </a>
                                 </h3>
                                 <p class="news-one__text">Aellentesque porttitor lacus quis enim varius sed efficitur
                                     turpis gilla sed sit amet.</p>

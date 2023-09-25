@@ -170,8 +170,7 @@ class Frontend extends CI_Controller {
 	function registerNow()
 	{
 
-		if($_SERVER['REQUEST_METHOD']=='POST')
-		{
+		   
 			$this->form_validation->set_rules('username','User Name','required');
 			$this->form_validation->set_rules('email','Email','required');
 			$this->form_validation->set_rules('password','Password','required');
@@ -194,11 +193,8 @@ class Frontend extends CI_Controller {
 				$this->session->set_flashdata('success','Successfully User Created');
 				redirect(base_url().'index.php/Frontend/login');
 			}
-		}
-		else{
-			echo"not";
-		}
 		
+				
 	}
 
 	function login()
