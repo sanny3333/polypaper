@@ -660,8 +660,13 @@ ul {
   height: 2px;
   width: 100%;
   border-radius: 0px;
+<<<<<<< HEAD
   background-color: var(--conult-base);
   position: absolute;
+=======
+  background-color: rgb(98, 255, 0);
+    position: absolute;
+>>>>>>> fcebe7c086f7690010a9404789e198d69b2ea891
   bottom: 0px;
   left: 0px;
   transition: transform 500ms ease;
@@ -686,11 +691,11 @@ ul {
 }
 
 .main-menu .main-menu__list>li.current>a::before {
-  background-color: var(--conult-base);
+  background-color: rgb(98, 255,0);
 }
 
 .main-menu .main-menu__list>li:hover>a::before {
-  background-color: var(--conult-base);
+  background-color: rgb(98, 255, 0);
 }
 
 .main-menu .main-menu__list li ul,
