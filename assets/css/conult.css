@@ -658,12 +658,12 @@ ul {
 .stricky-header .main-menu__list>li>a::before {
   content: "";
   height: 2px;
-  width: 12px;
+  width: 100%;
   border-radius: 0px;
-  background-color: var(--conult-base);
-  position: absolute;
-  bottom: 16px;
-  left: -22px;
+  background-color: rgb(98, 255, 0);
+    position: absolute;
+  bottom: 0px;
+  left: 0px;
   transition: transform 500ms ease;
   transform: scale(0, 1);
   transform-origin: left center;
@@ -686,11 +686,11 @@ ul {
 }
 
 .main-menu .main-menu__list>li.current>a::before {
-  background-color: var(--conult-base);
+  background-color: rgb(98, 255,0);
 }
 
 .main-menu .main-menu__list>li:hover>a::before {
-  background-color: var(--conult-base);
+  background-color: rgb(98, 255, 0);
 }
 
 .main-menu .main-menu__list li ul,
