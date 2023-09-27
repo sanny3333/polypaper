@@ -28,7 +28,7 @@
                                 </a>
                                
                             </div>
-                            <div class="news-one__content">
+                            <div class="news-one__content1">
                                 <ul class="list-unstyled news-one__meta">
                                     </li>
                                 </ul>
@@ -56,7 +56,7 @@
                                 </a>
                                
                             </div>
-                            <div class="news-one__content">
+                            <div class="news-one__content1">
                                 <ul class="list-unstyled news-one__meta">                       
                                      </li>
                                 </ul>
@@ -82,7 +82,7 @@
                                 </a>
                                
                             </div>
-                            <div class="news-one__content">
+                            <div class="news-one__content1">
                                 <ul class="list-unstyled news-one__meta">
                                     </li>
                                 </ul>
@@ -108,7 +108,7 @@
                                 </a>
                              
                             </div>
-                            <div class="news-one__content">
+                            <div class="news-one__content1">
                                 <ul class="list-unstyled news-one__meta">                                    </li>
                                 </ul>
                                 <h3 class="news-one__title">
@@ -132,7 +132,7 @@
                                 </a>
                             
                             </div>
-                            <div class="news-one__content">
+                            <div class="news-one__content1">
                                 <ul class="list-unstyled news-one__meta">
                                     </li>
                                 </ul>
@@ -157,7 +157,7 @@
                                 </a>
                                 
                             </div>
-                            <div class="news-one__content">
+                            <div class="news-one__content1">
                                 <ul class="list-unstyled news-one__meta">
                                     </li>
                                 </ul>
