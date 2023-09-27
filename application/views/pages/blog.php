@@ -12,7 +12,8 @@
             </div>
         </section>
         <!--Page Header End-->
-
+        
+        
         <!--News Page Start-->
         <section class="news-page">
             <div class="container">
@@ -39,10 +40,10 @@
                                 <p class="news-one__text">A team of Mexican researchers found a way to save 20 trees and 56,000 liters of water for every ton of paper</p>
                                 <div class="news-one__bottom">
                                     <a href="<?php echo site_url();?>/frontend/blog1" class="news-one__btn">Read More</a>
-                                    <a href="<?php echo site_url();?>/frontend/blog1" class="news-one__arrow"><span
-                                            class="icon-right-arrow"></span></a>
+                                    <a href="<?php echo site_url();?>/frontend/blog1" class="news-one__arrow"><span class="icon-right-arrow"></span></a>
                                 </div>
                             </div>
+                            
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="200ms">
@@ -67,8 +68,7 @@
                                     turpis gilla sed sit amet.</p>
                                 <div class="news-one__bottom">
                                     <a href="<?php echo site_url();?>/frontend/blog2" class="news-one__btn">Read More</a>
-                                    <a href="<?php echo site_url();?>/frontend/blog2" class="news-one__arrow"><span
-                                            class="icon-right-arrow"></span></a>
+                                    <a href="<?php echo site_url();?>/frontend/blog2" class="news-one__arrow"><span class="icon-right-arrow"></span></a>
                                 </div>
                             </div>
                         </div>
