@@ -652,7 +652,7 @@ ul {
   transition: all 500ms ease;
   font-weight: 400;
 }
-
+/* 
 .main-menu .main-menu__list>li>a::before,
 .stricky-header .main-menu__list>li>a::before {
   content: "";
@@ -670,7 +670,7 @@ ul {
   transform: scale(0, 1);
   transform-origin: left center;
   z-index: 1;
-}
+} */
 
 .main-menu .main-menu__list>li.current>a,
 .main-menu .main-menu__list>li:hover>a,
@@ -7944,4 +7944,7 @@ ul {
       transform: scale(1.7);
       opacity: 0;
   }
+}
+.main-menu__list li:hover a{ 
+  color: rgb(98, 255, 0)!important;
 }
