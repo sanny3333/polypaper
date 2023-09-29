@@ -4,7 +4,7 @@ class User_model extends CI_Model {
 
 	function insertuser($data)
 	{
-		$this->db->insert('reg',$data);
+		return $this->db->insert('reg',$data);
 	}
 
 	function checkPassword($password,$email)
