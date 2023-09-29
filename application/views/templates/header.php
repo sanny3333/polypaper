@@ -65,7 +65,7 @@
                             <a href="#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
                             <ul class="main-menu__list">
 
-                                <li> <a href="<?php echo site_url();?>/frontend/index">Home</a></li>
+                                <li><a href="<?php echo site_url();?>/frontend/index">Home</a></li>
                                 <li><a href="<?php echo site_url();?>/frontend/about">About</a></li>
                                 <li><a href="<?php echo site_url();?>/frontend/products">Products</a></li>
                                 <li><a href="<?php echo site_url();?>/frontend/blogs">Blogs</a></li>
