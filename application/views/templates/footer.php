@@ -18,7 +18,7 @@
                                     <form class="site-footer__top-newsletter-form">
                                         <div class="site-footer__top-newsletter-input-box">
                                             <input type="email" placeholder="Email Address" name="email">
-                                            <button type="submit" class="site-footer__top-newsletter-btn">Go</button>
+                                            <button type="submit" class="site-footer__top-newsletter-btn">Subscribe</button>
                                         </div>
                                     </form>
                                 </div>
