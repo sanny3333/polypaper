@@ -75,7 +75,7 @@
                       
                         // Display the copyright year.
                         echo '&copy; ' . $currentYear . ' Copyright By';
-                      ?> <a href="#">Polyapaper</a></p>
+                      ?> <a href="#">Noitavonne</a></p>
                 </div>
             </div>
         </footer>

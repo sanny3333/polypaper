@@ -55,7 +55,7 @@
 						  <button type="submit" class="btn btn-primary">Register Now</button>
 						</div>
 						 <div class="text-center">
-						  <a href="<?php echo site_url();?>/frontend/login"  >login </a>
+						  <a href="<?php echo site_url();?>/frontend/login">login </a>
 						</div>
 
 						<?php
