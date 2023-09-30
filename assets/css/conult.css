@@ -652,11 +652,11 @@ ul {
   transition: all 500ms ease;
   font-weight: 400;
 
-}
+ }
 .main-menu .main-menu__list>li>a, .stricky-header .main-menu__list>li>a:hover,
 .main-menu .main-menu__list>li>a, .stricky-header .main-menu__list>li>a:active{
   color: chartreuse;
-}
+} 
 
 /* .main-menu .main-menu__list>li>a::before,
 .stricky-header .main-menu__list>li>a{
