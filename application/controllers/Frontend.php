@@ -2,7 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Frontend extends CI_Controller {
-
+	
 // Home =============>
 	public function index()
 	{
@@ -170,28 +170,49 @@ class Frontend extends CI_Controller {
 	function registerNow()
 	{
 
-		   
-			$this->form_validation->set_rules('username','User Name','required');
+		    $this->load->library('form_validation');
+		    $this->load->helper('form');
+			// $this->form_validation->set_rules('username','User Name','trim|required|alpha');
+			$this->form_validation->set_rules('username','Username','required');
+			// $this->form_validation->set_rules('email','Email','trim|required|valid_email|is_unique[reg.email]');
 			$this->form_validation->set_rules('email','Email','required');
+			// $this->form_validation->set_rules('password','Password','trim|required|sha1');
 			$this->form_validation->set_rules('password','Password','required');
 
-			if($this->form_validation->run()==TRUE)
+
+			
+			if($this->form_validation->run()==FALSE)
 			{
-				$username = $this->input->post('username');
-				$email = $this->input->post('email');
-				$password = $this->input->post('password');
+				redirect(base_url('Frontend/login'));
+			}
+			else
+			{
 
 				$data = array(
-					'username'=>$username,
-					'email'=>$email,
-					'password'=>sha1($password),
+					'username'=>$this->input->post('username'),
+					'email'=>$this->input->post('email'),
+					'password'=> $this->input->post('password'),
 					'status'=>'1'
 				);
 
 				$this->load->model('user_model');
-				$this->user_model->insertuser('reg',$data);
-				$this->session->set_flashdata('success','Successfully User Created');
-				redirect(base_url().'index.php/Frontend/login');
+				$checking=$this->user_model->insertuser($data);
+				
+				if($checking)
+				{
+					$this->session->set_flashdata('success','Registered Successfully.! Go to login');
+					redirect(base_url('Frontend/login'));
+				}
+				else
+				{
+					$this->session->set_flashdata('status','Something went wrong');
+					redirect(base_url('/Frontend/register'));
+				}
+
+				//$this->load->model('user_model');
+				//$this->user_model->insertuser('reg',$data);
+				//$this->session->set_flashdata('success','Successfully User Created');
+				//redirect(base_url().'index.php/Frontend/login');
 			}
 		
 				

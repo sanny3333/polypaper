@@ -36,19 +36,21 @@
 					    Register Now
 					  </div>
 					  <div class="card-body">
-					   <form method="POST"  action="<?php echo site_url();?>/frontend">
+					   <form method="POST"  action="<?php echo base_url();?>frontend/registernow">
 					   	<div class="mb-3">
 						    <label for="exampleInputEmail1" class="form-label">Name</label>
 						    <input type="text" placeholder="User Name" name="username" class="form-control" id="name" aria-describedby="name">
-						    
+						    <small><?php echo form_error('username'); ?></small>
 						  </div>
 						  <div class="mb-3">
 						    <label for="exampleInputEmail1" class="form-label">Email address</label>
 						    <input type="email"  placeholder="Email Address" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+						 	<small><?php echo form_error('email'); ?></small>
 						  </div>
 						  <div class="mb-3">
 						    <label for="exampleInputPassword1" class="form-label">Password</label>
 						    <input type="password" name="password"  placeholder="User Password"  class="form-control" id="exampleInputPassword1">
+							<small><?php echo form_error('password'); ?></small>
 						  </div>
 
 						 <div class="text-center">
