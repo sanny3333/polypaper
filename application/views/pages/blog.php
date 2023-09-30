@@ -6,7 +6,7 @@
                     <h2>Latest blogs</h2>
                     <ul class="thm-breadcrumb list-unstyled">
                         <li><a href="<?php echo site_url();?>/frontend/index">Home</a></li>
-                        <li class="active">blogs</li>
+                        <li>blogs</li>
                     </ul>
                 </div>
             </div>
@@ -62,10 +62,9 @@
                                 <ul class="list-unstyled news-one__meta">                                    </li>
                                 </ul>
                                 <h3 class="news-one__title">
-                                    <a href="Blogs/<?php echo site_url();?>/frontend/blog2">Bring to the table win-win survival </a>
+                                    <a href="Blogs/<?php echo site_url();?>/frontend/blog2">Get paper from plastic pulp, the Khadi way </a>
                                 </h3>
-                                <p class="news-one__text">Aellentesque porttitor lacus quis enim varius sed efficitur
-                                    turpis gilla sed sit amet.</p>
+                                <p class="news-one__text">Plastic is collected, chopped into fine pieces and mixed with cotton fibre rags to produce paper bags, notebooks and household items.</p>
                                 <div class="news-one__bottom">
                                     <a href="<?php echo site_url();?>/frontend/blog2" class="news-one__btn">Read More</a>
                                     <a href="<?php echo site_url();?>/frontend/blog2" class="news-one__arrow"><span class="icon-right-arrow"></span></a>
@@ -90,10 +89,9 @@
                                     </li>
                                 </ul>
                                 <h3 class="news-one__title">
-                                    <a href="<?php echo site_url();?>/frontend/blog3">Capitalize on low hanging fruit to</a>
+                                    <a href="<?php echo site_url();?>/frontend/blog3">Printable Paper from Plastic Waste</a>
                                 </h3>
-                                <p class="news-one__text">Aellentesque porttitor lacus quis enim varius sed efficitur
-                                    turpis gilla sed sit amet.</p>
+                                <p class="news-one__text">Many plastics currently in use cannot be easily recycled. This includes flexible plastic films, which have become increasingly popular due to their versatility, lightness and printability.</p>
                                 <div class="news-one__bottom">
                                     <a href="<?php echo site_url();?>/frontend/blog3" class="news-one__btn">Read More</a>
                                     <a href="<?php echo site_url();?>/frontend/blog3" class="news-one__arrow"><span
@@ -161,7 +159,7 @@
                         <!--News One Single-->
                         <div class="news-one__single">
                             <div class="news-one__img">
-                                <img src="<?php echo base_url();?>/assets/images/blog/blog6_card.jpg" alt="">
+                                <img src="<?php echo base_url();?>/assets/images/blog/blog7_card.jpg" alt="">
                                 <a href="<?php echo site_url();?>/frontend/blog6">
                                     <span class="news-one__plus"></span>
                                 </a>

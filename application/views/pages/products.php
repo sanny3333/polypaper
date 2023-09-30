@@ -6,7 +6,7 @@
                     <h2>Products</h2>
                     <ul class="thm-breadcrumb list-unstyled">
                         <li><a href="<?php echo site_url();?>/frontend/index">Home</a></li>
-                        <li class="active">Products</li>
+                        <li>Products</li>
                     </ul>
                 </div>
             </div>
@@ -151,7 +151,7 @@
                         <!--News One Single-->
                         <div class="news-one__single">
                             <div class="news-one__img">
-                                <img src="<?php echo base_url();?>/assets/images/product/product6_card.jpg" alt="">
+                                <img src="<?php echo base_url();?>/assets/images/product/product6card.jpg" alt="">
                                 <a href="<?php echo site_url();?>/frontend/product6">
                                     <span class="news-one__plus"></span>
                                 </a>

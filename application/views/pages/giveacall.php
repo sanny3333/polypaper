@@ -16,7 +16,7 @@
                     <h2>Login</h2>
                     <ul class="thm-breadcrumb list-unstyled">
                         <li><a href="<?php echo site_url();?>/frontend/index">Home</a></li>
-                        <li class="active">Login</li>
+                        <li>Login</li>
                     </ul>
                 </div>
             </div>

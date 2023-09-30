@@ -6,7 +6,7 @@
                     <h2>Contact us</h2>
                     <ul class="thm-breadcrumb list-unstyled">
                         <li><a href="<?php echo site_url();?>/frontend/index">Home</a></li>
-                        <li class="active">Contact</li>
+                        <li>Contact</li>
                     </ul>
                 </div>
             </div>

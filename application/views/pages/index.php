@@ -142,14 +142,13 @@
 
                                 </div> -->
 
-                                <div class="embed-responsive embed-responsive-21by9">
-                                    <!-- <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/5xrWrKIVBgo"></iframe> -->
+                                <!-- <div class="embed-responsive embed-responsive-21by9">
 
                                     <iframe  class="yvdio"  src="https://www.youtube.com/embed/5xrWrKIVBgo"
                                         title="YouTube video player" frameborder="0"
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                         allowfullscreen></iframe>
-                                </div>
+                                </div> -->
 
 
                             </div>

@@ -6,7 +6,7 @@
                     <h2>About us</h2>
                     <ul class="thm-breadcrumb list-unstyled">
                         <li><a href="<?php echo site_url();?>/frontend/index">Home</a></li>
-                        <li class="active">About</li>
+                        <li>About</li>
                     </ul>
                 </div>
             </div>
@@ -105,7 +105,7 @@ The detrimental side to plastic has just dawned upon us. Due to the huge amount 
                                     </div>
                                 </div>
                                 <div class="testimonial-one__quote-icon">
-                                    <img src="assets/images/icon/quote-icon.png" alt="">
+                                    <img src="<?php echo base_url();?>/assets/images/icon/quote-icon.png" alt="">
                                 </div>
                             </div>
                             <!--Testimonial One Single-->

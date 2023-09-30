@@ -20,7 +20,7 @@
                     <h2>Login</h2>
                     <ul class="thm-breadcrumb list-unstyled">
                         <li><a href="<?php echo site_url();?>/frontend/index">Home</a></li>
-                        <li class="active">Login</li>
+                        <li>Login</li>
                     </ul>
                 </div>
             </div>
@@ -30,7 +30,7 @@
 			<div class="row">
 				<div class="col-md-4"></div>
 				<div class="col-md-4">
-					<div class="card" style="margin-top: 30px">
+					<div class="card">
 					  <div class="card-header text-center">
 					    Login Now
 					  </div>
