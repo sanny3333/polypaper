@@ -6,7 +6,7 @@
                     <h2>Product Details</h2>
                     <ul class="thm-breadcrumb list-unstyled">
                         <li><a href="<?php echo site_url();?>/frontend/index">Home</a></li>
-                        <li class="active">product</li>
+                        <li>product</li>
                     </ul>
                 </div>
             </div>
@@ -20,12 +20,12 @@
                     <div class="col-xl-12 col-lg-11">
                         <div class="news-details__left">
                             <div class="news-details__img">
-                                <img src="<?php echo base_url();?>/assets/images/product/product3_card.jpg" alt="">
+                                <img src="<?php echo base_url();?>/assets/images/product/product_3_card.jpg" alt="">
                                 
                             </div>
                             <div class="news-details__content">
                                 
-                                <h3 class="news-details__title">Poly Coated Paper For Sugar Sachets Exporter</h3>
+                                <h3 class="news-details__title">Poly Coated FBB Board Paper</h3>
                                 <b>Product Description:</b>
                                 <p class="news-details__text-1">A range of various boards such as pulp board, paste board, Bristol board, ivory board, art board, chrome board, industrial paper board, duplex paper board in the form of a coherent sheet or web used for printing, packaging, decorating etc.</p>
                                 <p class="news-details__text-2">Also known as box board, carton board, and cardboard, Paperboard containing recovered fiber is a multi-ply material, formed in layers of recovered fiber. Often grey in appearance, a white top layer made from recovered office paper is often used to provide a clean printing surface. It comes in many forms having various attributes. Common examples include chipboard and solid bleached sulfate, or SBS, board. The main advantage of paperboard is that it is cheap.</p>

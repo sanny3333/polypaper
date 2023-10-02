@@ -80,7 +80,7 @@
                         }
                         ?>
                         <div class="contact-page__form">
-                            <form method='post' action="<?php echo base_url().'index.php/Frontend/contact';?>"  >
+                            <form method='post' action="<?php echo base_url().'Frontend/contact';?>"  >
                                 <div class="row">
                                     <div class="col-xl-6">
                                         <div class="comment-form__input-box">

@@ -146,11 +146,11 @@ class Frontend extends CI_Controller {
 			 $formArray['subject']=$this->input->post('subject');
 			 $formArray['message']=$this->input->post('message');
 			 $formArray['created_at']= date('Y-m-d');
-
-			 $this->Contact_model->create($formArray);
-			 $this->session->set_flashdata('success','Thank you !! We will meet soon.');
+			
+			$this->Contact_model->create($formArray);
+			$this->session->set_flashdata('success','Thank you !! We will meet soon.');
 			//  $this->session->set_flashdata('failure','contacted successfully !!!!.');
-			 redirect(base_url().'index.php/Frontend/contact');
+			redirect(base_url().'Frontend/contact');
 
 			 
 
@@ -183,7 +183,9 @@ class Frontend extends CI_Controller {
 			
 			if($this->form_validation->run()==FALSE)
 			{
-				redirect(base_url('Frontend/login'));
+				$this->load->view('templates/header');
+				$this->load->view('signup');
+				$this->load->view('templates/footer');
 			}
 			else
 			{
@@ -191,7 +193,7 @@ class Frontend extends CI_Controller {
 				$data = array(
 					'username'=>$this->input->post('username'),
 					'email'=>$this->input->post('email'),
-					'password'=> $this->input->post('password'),
+					'password' => password_hash($this->input->post('password'), PASSWORD_DEFAULT),
 					'status'=>'1'
 				);
 
@@ -205,8 +207,8 @@ class Frontend extends CI_Controller {
 				}
 				else
 				{
-					$this->session->set_flashdata('status','Something went wrong');
-					redirect(base_url('/Frontend/register'));
+					$this->session->set_flashdata('failure','Something went wrong');
+					redirect(base_url('Frontend/register'));
 				}
 
 				//$this->load->model('user_model');
