@@ -206,7 +206,7 @@ class Frontend extends CI_Controller {
 				else
 				{
 					$this->session->set_flashdata('status','Something went wrong');
-					redirect(base_url('/Frontend/register'));
+					redirect(base_url('/Frontend/registerNow'));
 				}
 
 				//$this->load->model('user_model');

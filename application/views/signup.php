@@ -36,7 +36,7 @@
 					    Register Now
 					  </div>
 					  <div class="card-body">
-					   <form method="POST"  action="<?php echo base_url();?>frontend/registernow">
+					   <form method="POST"  action="<?php echo base_url();?>Frontend/registerNow">
 					   	<div class="mb-3">
 						    <label for="exampleInputEmail1" class="form-label">Name</label>
 						    <input type="text" placeholder="User Name" name="username" class="form-control" id="name" aria-describedby="name">
