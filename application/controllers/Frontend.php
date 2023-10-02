@@ -2,7 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Frontend extends CI_Controller {
-	
+
 // Home =============>
 	public function index()
 	{
@@ -170,52 +170,38 @@ class Frontend extends CI_Controller {
 	function registerNow()
 	{
 
-		    $this->load->library('form_validation');
-		    $this->load->helper('form');
-			// $this->form_validation->set_rules('username','User Name','trim|required|alpha');
-			$this->form_validation->set_rules('username','Username','required');
-			// $this->form_validation->set_rules('email','Email','trim|required|valid_email|is_unique[reg.email]');
+		print_r($this->input->post());
+		die;
+		if($_SERVER['REQUEST_METHOD']=='POST')
+		{
+			$this->form_validation->set_rules('username','User Name','required');
 			$this->form_validation->set_rules('email','Email','required');
-			// $this->form_validation->set_rules('password','Password','trim|required|sha1');
 			$this->form_validation->set_rules('password','Password','required');
 
-
-			
-			if($this->form_validation->run()==FALSE)
+			if($this->form_validation->run()==TRUE)
 			{
-				redirect(base_url('Frontend/login'));
-			}
-			else
-			{
+				$username = $this->input->post('username');
+				$email = $this->input->post('email');
+				$password = $this->input->post('password');
 
 				$data = array(
-					'username'=>$this->input->post('username'),
-					'email'=>$this->input->post('email'),
-					'password'=> $this->input->post('password'),
+					'username'=>$username,
+					'email'=>$email,
+					'password'=>sha1($password),
 					'status'=>'1'
 				);
+				print_r($this->input->post());
+				die;
+
+
+
 
 				$this->load->model('user_model');
-				$checking=$this->user_model->insertuser($data);
-				
-				if($checking)
-				{
-					$this->session->set_flashdata('success','Registered Successfully.! Go to login');
-					redirect(base_url('Frontend/login'));
-				}
-				else
-				{
-					$this->session->set_flashdata('status','Something went wrong');
-					redirect(base_url('/Frontend/register'));
-				}
-
-				//$this->load->model('user_model');
-				//$this->user_model->insertuser('reg',$data);
-				//$this->session->set_flashdata('success','Successfully User Created');
-				//redirect(base_url().'index.php/Frontend/login');
+				$this->user_model->insertuser('reg',$data);
+				$this->session->set_flashdata('success','Successfully User Created');
+				redirect(base_url().'Frontend/login');
 			}
-		
-				
+		}
 	}
 
 	function login()
@@ -232,15 +218,17 @@ class Frontend extends CI_Controller {
 		{
 			$this->form_validation->set_rules('email','Email','required');
 			$this->form_validation->set_rules('password','Password','required');
-
 			if($this->form_validation->run()==TRUE)
+			
 			{
 				$email = $this->input->post('email');
 				$password = $this->input->post('password');
 				$password = sha1($password);
 
+
 				$this->load->model('user_model');
 				$status = $this->user_model->checkPassword($password,$email);
+				
 				if($status!=false)
 				{
 					$username = $status->username;
@@ -253,19 +241,19 @@ class Frontend extends CI_Controller {
 
 					$this->session->set_userdata('UserLoginSession',$session_data);
 
-					redirect(base_url('index.php/Frontend/dashboard'));
+					redirect(base_url('Frontend/dashboard'));
 				}
 				else
 				{
 					$this->session->set_flashdata('error','Email or Password is Wrong');
-					redirect(base_url('index.php/frontend/login'));
+					redirect(base_url('frontend/login'));
 				}
 
 			}
 			else
 			{
 				$this->session->set_flashdata('error','Fill all the required fields');
-				redirect(base_url('index.php/frontend/login'));
+				redirect(base_url('frontend/login'));
 			}
 		}
 	}
