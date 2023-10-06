@@ -73,7 +73,7 @@
     $(".typed-effect").each(function () {
       var typedStrings = $(this).data("strings");
       var typedTag = $(this).attr("id");
-      var typed = new Typed("#" + typedTag, { 
+      var typed = new Typed("#" + typedTag, {
         typeSpeed: 100,
         backSpeed: 100,
         fadeOut: true,
@@ -211,7 +211,7 @@
       }
     });
   }
-    
+
   // Case Two Carousel
   if ($(".case-two__carousel").length) {
     $(".case-two__carousel").owlCarousel({
@@ -245,9 +245,9 @@
         }
       }
     });
-  }    
-    
-    
+  }
+
+
   // Testimonial One Carousel
   if ($(".testimonial-one__carousel").length) {
     $(".testimonial-one__carousel").owlCarousel({
@@ -297,7 +297,7 @@
       return false;
     });
   }
-    
+
   // News One Carousel
   if ($(".news-one__carousel").length) {
     $(".news-one__carousel").owlCarousel({
@@ -671,34 +671,34 @@
     });
   }
 
-function thmTestimonialsThumbCarousel() {
-        if ($("#testimonials-two__thumb").length) {
-            let testimonialsThumb = new Swiper("#testimonials-two__thumb", {
-                slidesPerView: 3,
-                spaceBetween: 0,
-                speed: 1400,
-                watchSlidesVisibility: true,
-                watchSlidesProgress: true,
-                autoplay: {
-                    delay: 5000
-                }
-            });
-
-            let testimonialsCarousel = new Swiper("#testimonials-two__carousel", {
-                observer: true,
-                observeParents: true,
-                speed: 1400,
-                mousewheel: true,
-                slidesPerView: 1,
-                autoplay: {
-                    delay: 5000
-                },
-                thumbs: {
-                    swiper: testimonialsThumb
-                }
-            });
+  function thmTestimonialsThumbCarousel() {
+    if ($("#testimonials-two__thumb").length) {
+      let testimonialsThumb = new Swiper("#testimonials-two__thumb", {
+        slidesPerView: 3,
+        spaceBetween: 0,
+        speed: 1400,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+        autoplay: {
+          delay: 5000
         }
+      });
+
+      let testimonialsCarousel = new Swiper("#testimonials-two__carousel", {
+        observer: true,
+        observeParents: true,
+        speed: 1400,
+        mousewheel: true,
+        slidesPerView: 1,
+        autoplay: {
+          delay: 5000
+        },
+        thumbs: {
+          swiper: testimonialsThumb
+        }
+      });
     }
+  }
 
   // ===Portfolio===
   function projectMasonaryLayout() {
@@ -741,7 +741,7 @@ function thmTestimonialsThumbCarousel() {
       });
     }
   }
-    
+
 
 
   // window load event
@@ -872,6 +872,13 @@ function thmTestimonialsThumbCarousel() {
 // youtube popup
 
 
-function togglePopup(){
+function togglePopup() {
   document.getElementById("popup-1").classList.toggle("active")
 }
+
+
+
+
+
+
+

@@ -7553,6 +7553,7 @@ a:hover
   justify-content: center;
 }
 
+
 .get-to-know__points li .text {
   margin-left: 20px;
 }
@@ -7681,13 +7682,14 @@ a:hover
 }
 
 .contact-page-details__right:before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
   content: "";
-  height: 4px;
-  background-color: var(--conult-base);
+    width: 20%;
+    background-color: var(--oc1);
+    height: 15%;
+    position: absolute;
+    bottom: -40%;
+    transition: .4s;
+    transition-timing-function: ease-in-out;
 }
 
 .contact-page-details__list {
@@ -7935,8 +7937,20 @@ a:hover
 .card{
   margin-top: 30px;
   margin-bottom: 30px;
+  width: 80%;
+  margin-left:-5%;
 }
 
+.g-recaptcha{
+  transform:scale(0.95);
+  margin-left: -10px;
+}
+
+.footer-widget__contact i{
+  color: #ffffff;
+  margin-right: 10px;
+  font-size: 16px;
+}
 
 
 
