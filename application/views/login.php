@@ -35,16 +35,21 @@
 					    Login Now
 					  </div>
 					  <div class="card-body">
-					   <form method="post" autocomplete="off" action="<?php echo site_url();?>/frontend/loginNow">
-					 
+					   <form method="post" autocomplete="off" action="<?php echo site_url();?>frontend/loginnow">
+					     
 						  <div class="mb-3">
 						    <label for="exampleInputEmail1" class="form-label">Email address</label>
-						    <input type="email"  placeholder="Email Address" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+						    <input type="email"  placeholder="Email Address" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+						    
+								
+						
 						  </div>
+
 						  <div class="mb-3">
 						    <label for="exampleInputPassword1" class="form-label">Password</label>
-						    <input type="password" name="password"  placeholder="User Password"  class="form-control" id="exampleInputPassword1">
-						  </div>
+						    <input type="password" name="password"  placeholder="User Password"  class="form-control" id="exampleInputPassword1" required>
+							
+						</div>
 
 						 <div class="text-center">
 						  <button type="submit" class="btn btn-primary">Login Now</button>
@@ -52,12 +57,11 @@
 						 <div class="text-center">
 						  <a href="<?php echo site_url();?>/frontend/registration"  >Sign Up</a>
 						</div>
-
-					<?php
-						if($this->session->flashdata('error')) {	?>
-						 <p class="text-danger text-center" style="margin-top: 10px;"> <?=$this->session->flashdata('error')?></p>
-						<?php } ?>
-						
+						<center>
+						<?php if (isset($error)) : ?>
+							<p style="color: blue;"><?php echo $error; ?></p>
+						<?php endif; ?>
+						</center>
 						</form>
 					  </div>
 					</div>

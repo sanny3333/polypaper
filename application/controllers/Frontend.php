@@ -173,25 +173,32 @@ class Frontend extends CI_Controller {
 		    $this->load->library('form_validation');
 		    $this->load->helper('form');
 			// $this->form_validation->set_rules('username','User Name','trim|required|alpha');
-			$this->form_validation->set_rules('username','Username','required');
+			$this->form_validation->set_rules('username','Username','required|alpha');
 			// $this->form_validation->set_rules('email','Email','trim|required|valid_email|is_unique[reg.email]');
-			$this->form_validation->set_rules('email','Email','required');
+			$this->form_validation->set_rules('email','Email','required|is_unique[reg.email]');
+			$this->form_validation->set_rules('phoneno','Phone','required');
 			// $this->form_validation->set_rules('password','Password','trim|required|sha1');
 			$this->form_validation->set_rules('password','Password','required');
+			$this->form_validation->set_rules('confirmpassword','Password','required|matches[password]');
 
 
 			
 			if($this->form_validation->run()==FALSE)
 			{
-				redirect(base_url('Frontend/login'));
+				$this->load->view('templates/header');
+				$this->load->view('signup');
+				$this->load->view('templates/footer');
+				
+				//redirect(base_url('Frontend/login'));
 			}
 			else
 			{
-
+				
 				$data = array(
 					'username'=>$this->input->post('username'),
 					'email'=>$this->input->post('email'),
-					'password'=> $this->input->post('password'),
+					'phoneno'=>$this->input->post('phoneno'),
+					'password' =>md5($this->input->post('password')),
 					'status'=>'1'
 				);
 
@@ -200,13 +207,13 @@ class Frontend extends CI_Controller {
 				
 				if($checking)
 				{
-					$this->session->set_flashdata('success','Registered Successfully.! Go to login');
-					redirect(base_url('Frontend/login'));
+					$this->session->set_flashdata('error','Registered Successfully.! Go to login');
+					$this->load->view('login');
 				}
 				else
 				{
-					$this->session->set_flashdata('status','Something went wrong');
-					redirect(base_url('/Frontend/register'));
+					$this->session->set_flashdata('error','Something went wrong');
+					redirect(base_url('Frontend/registration'));
 				}
 
 				//$this->load->model('user_model');
@@ -228,46 +235,72 @@ class Frontend extends CI_Controller {
 
 	function loginnow()
 	{
-		if($_SERVER['REQUEST_METHOD']=='POST')
-		{
-			$this->form_validation->set_rules('email','Email','required');
-			$this->form_validation->set_rules('password','Password','required');
-
-			if($this->form_validation->run()==TRUE)
-			{
-				$email = $this->input->post('email');
-				$password = $this->input->post('password');
-				$password = sha1($password);
-
-				$this->load->model('user_model');
-				$status = $this->user_model->checkPassword($password,$email);
-				if($status!=false)
-				{
-					$username = $status->username;
-					$email = $status->email;
-
-					$session_data = array(
-						'username'=>$username,
-						'email' => $email,
-					);
-
-					$this->session->set_userdata('UserLoginSession',$session_data);
-
-					redirect(base_url('index.php/Frontend/dashboard'));
+		 // Validate the login form data
+		 $this->load->library('form_validation');
+		 $this->load->helper('form');
+        // Set the form validation rules
+        $this->form_validation->set_rules('email', 'Email', 'required');
+        $this->form_validation->set_rules('password', 'Password', 'required');
+        // If the form validation fails
+		
+        if ($this->form_validation->run() == FALSE) {
+            // Display the login form
+			$this->load->view('templates/header');
+			$this->load->view('login');
+			$this->load->view('templates/footer');
+			
+        } else {
+            // Validate the user's credentials
+            $email = $this->input->post('email');
+            $password = $this->input->post('password');
+			
+            // Load the user model
+            $this->load->model('User_model');
+			
+            // Get the user's data
+            $user = $this->User_model->checkPassword($email,$password);
+			$hashed_p=md5($password);
+            // If the user exists and the password is correct
+            if ($user) {
+                // Log the user in
+				$this->load->view('templates/header');
+				$this->load->view('login', array('error' => 'Login successfully.'));
+				$this->load->view('templates/footer');
+            } else {
+				$login_attempt_count = $this->session->userdata('login_attempt_count');
+				if (!$login_attempt_count) {
+					$login_attempt_count = 0;
 				}
-				else
-				{
-					$this->session->set_flashdata('error','Email or Password is Wrong');
-					redirect(base_url('index.php/frontend/login'));
+	
+				// Increment the login attempt count
+				$login_attempt_count++;
+	
+				// Set the login attempt count in the session
+				$this->session->set_userdata('login_attempt_count', $login_attempt_count);
+	
+				// Check the login attempt count
+				if ($login_attempt_count >= 3) {
+					// Lock the user's account
+					$this->user_model->lock_user($user['user_id'], time() + 300); // Lock the user for 5 minutes
+	
+					// Redirect the user to the login page with an error message
+					$this->load->view('templates/header');
+					$this->load->view('login', array('error' => 'Your account has been locked due to too many failed login attempts.'));
+					$this->load->view('templates/footer');
+						} 
+				else{
+					$this->load->view('templates/header');
+					$this->load->view('login', array('error' => 'Invalid username or password.'));
+					$this->load->view('templates/footer');
 				}
+                // Display an error message
+                //$this->load->view('login', ['error' => 'Invalid username or password.']);
+            }
+        
+		    }
 
-			}
-			else
-			{
-				$this->session->set_flashdata('error','Fill all the required fields');
-				redirect(base_url('index.php/frontend/login'));
-			}
-		}
+						
+		 
 	}
 
 	

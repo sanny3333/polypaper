@@ -37,21 +37,33 @@
 					  </div>
 					  <div class="card-body">
 					   <form method="POST"  action="<?php echo base_url();?>frontend/registernow">
-					   	<div class="mb-3">
+					    	
+					   <div class="mb-3">
 						    <label for="exampleInputEmail1" class="form-label">Name</label>
-						    <input type="text" placeholder="User Name" name="username" class="form-control" id="name" aria-describedby="name">
-						    <small><?php echo form_error('username'); ?></small>
+						    <input type="text" placeholder="User Name" name="username" class="form-control" id="name" aria-describedby="name" required>
+						    
 						  </div>
 						  <div class="mb-3">
 						    <label for="exampleInputEmail1" class="form-label">Email address</label>
-						    <input type="email"  placeholder="Email Address" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-						 	<small><?php echo form_error('email'); ?></small>
+						    <input type="email"  placeholder="Email Address" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+						 	
+						  </div>
+						  <div class="mb-3">
+						    <label for="exampleInputEmail1" class="form-label">Phone Number</label>
+						    <input type="number"  placeholder="Phone Number" name="phoneno" class="form-control" id="exampleInputPhone1" aria-describedby="emailHelp" required>
+						 	
 						  </div>
 						  <div class="mb-3">
 						    <label for="exampleInputPassword1" class="form-label">Password</label>
-						    <input type="password" name="password"  placeholder="User Password"  class="form-control" id="exampleInputPassword1">
-							<small><?php echo form_error('password'); ?></small>
+						    <input type="password" name="password"  placeholder="Password"  class="form-control" id="exampleInputPassword1" required>
+							
 						  </div>
+						  <div class="mb-3">
+						    <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
+						    <input type="password" name="confirmpassword"  placeholder="Confirm Password"  class="form-control" id="exampleInputPassword1" required>
+							
+						  </div>
+
 
 						 <div class="text-center">
 						  <button type="submit" class="btn btn-primary">Register Now</button>
@@ -60,10 +72,9 @@
 						  <a href="<?php echo site_url();?>/frontend/login">login </a>
 						</div>
 
-						<?php
-						if($this->session->flashdata('success')) {	?>
-						 <p class="text-success text-center" style="margin-top: 10px;"> <?=$this->session->flashdata('success')?></p>
-						<?php } ?>
+						<?php if ($this->session->flashdata('error')) {
+						 echo $this->session->flashdata('error');
+						}?>
 						
 						</form>
 					  </div>
