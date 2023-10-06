@@ -44,6 +44,11 @@
     <!-- template styles -->
     <link rel="stylesheet" href="<?php echo base_url();?>/assets/css/conult.css" />
     <link rel="stylesheet" href="<?php echo base_url();?>/assets/css/conult-responsive.css" />
+    <style>
+        .active{
+            color: rgb(98, 255, 0)!important;
+        }
+    </style>
 
 </head>
 
@@ -65,12 +70,20 @@
                             <a href="#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
                             <ul class="main-menu__list">
 
-                                <li> <a href="<?php echo site_url();?>/frontend/index">Home</a></li>
+                                <!-- <li><a href="<?php echo site_url();?>/frontend/index">Home</a></li>
                                 <li><a href="<?php echo site_url();?>/frontend/about">About</a></li>
                                 <li><a href="<?php echo site_url();?>/frontend/products">Products</a></li>
                                 <li><a href="<?php echo site_url();?>/frontend/blogs">Blogs</a></li>
                                 <li><a href="<?php echo site_url();?>/frontend/Giveacall">Give a call</a></li>
-                                <li><a href="<?php echo site_url();?>/frontend/contact">Contact</a></li>
+                                <li><a href="<?php echo site_url();?>/frontend/contact">Contact</a></li> -->
+
+                                <li> <a href="<?php echo base_url();?>frontend/index" class="nav-bar-link <?php if($this->uri->segment(2) == "index") echo "active" ?>">Home</a></li>
+                                <li><a href="<?php echo base_url();?>frontend/about" class="nav-bar-link <?php if($this->uri->segment(2) == "about") echo "active" ?>">About</a></li>
+                                <li><a href="<?php echo base_url();?>frontend/products" class="nav-bar-link <?php if($this->uri->segment(2) == "products") echo "active" ?>">Products</a></li>
+                                <li><a href="<?php echo base_url();?>frontend/blogs" class="nav-bar-link <?php if($this->uri->segment(2) == "blogs") echo "active" ?>">Blogs</a></li>
+                                <li><a href="<?php echo base_url();?>frontend/Giveacall" class="nav-bar-link <?php if($this->uri->segment(2) == "login") echo "active" ?>">Give a call</a></li>
+                                <li><a href="<?php echo base_url();?>frontend/contact" class="nav-bar-link <?php if($this->uri->segment(2) == "contact") echo "active" ?>">Contact</a></li>
+
                                 <!-- <li><a href="news.html">News</a></li> -->
                             </ul>
                         </div>
@@ -83,3 +96,6 @@
         <div class="stricky-header stricked-menu main-menu">
             <div class="sticky-header__content"></div><!-- /.sticky-header__content -->
         </div><!-- /.stricky-header -->
+       
+        </body>
+        </html>

@@ -6,7 +6,7 @@
                     <h2>Contact us</h2>
                     <ul class="thm-breadcrumb list-unstyled">
                         <li><a href="<?php echo site_url();?>/frontend/index">Home</a></li>
-                        <li class="active">Contact</li>
+                        <li>Contact</li>
                     </ul>
                 </div>
             </div>
@@ -80,7 +80,7 @@
                         }
                         ?>
                         <div class="contact-page__form">
-                            <form method='post' action="<?php echo base_url().'index.php/Frontend/contact';?>"  >
+                            <form method='post' action="<?php echo base_url().'Frontend/contact';?>"  >
                                 <div class="row">
                                     <div class="col-xl-6">
                                         <div class="comment-form__input-box">

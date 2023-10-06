@@ -146,11 +146,11 @@ class Frontend extends CI_Controller {
 			 $formArray['subject']=$this->input->post('subject');
 			 $formArray['message']=$this->input->post('message');
 			 $formArray['created_at']= date('Y-m-d');
-
-			 $this->Contact_model->create($formArray);
-			 $this->session->set_flashdata('success','Thank you !! We will meet soon.');
+			
+			$this->Contact_model->create($formArray);
+			$this->session->set_flashdata('success','Thank you !! We will meet soon.');
 			//  $this->session->set_flashdata('failure','contacted successfully !!!!.');
-			 redirect(base_url().'index.php/Frontend/contact');
+			redirect(base_url().'Frontend/contact');
 
 			 
 
@@ -188,8 +188,6 @@ class Frontend extends CI_Controller {
 				$this->load->view('templates/header');
 				$this->load->view('signup');
 				$this->load->view('templates/footer');
-				
-				//redirect(base_url('Frontend/login'));
 			}
 			else
 			{
@@ -198,7 +196,7 @@ class Frontend extends CI_Controller {
 					'username'=>$this->input->post('username'),
 					'email'=>$this->input->post('email'),
 					'phoneno'=>$this->input->post('phoneno'),
-					'password' =>md5($this->input->post('password')),
+					'password'  =>md5(password_hash($this->input->post('password')), PASSWORD_DEFAULT),
 					'status'=>'1'
 				);
 
