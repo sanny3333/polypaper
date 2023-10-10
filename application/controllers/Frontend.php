@@ -177,9 +177,9 @@ class Frontend extends CI_Controller {
 			// $this->form_validation->set_rules('email','Email','trim|required|valid_email|is_unique[reg.email]');
 			$this->form_validation->set_rules('email','Email','required|is_unique[reg.email]');
 			$this->form_validation->set_rules('phoneno','Phone','required');
+			$this->form_validation->set_rules('mobile', 'Mobile Number', 'trim|required|numeric'); 
 			// $this->form_validation->set_rules('password','Password','trim|required|sha1');
 			$this->form_validation->set_rules('password','Password','required');
-			$this->form_validation->set_rules('confirmpassword','Password','required|matches[password]');
 
 
 			
@@ -195,8 +195,7 @@ class Frontend extends CI_Controller {
 				$data = array(
 					'username'=>$this->input->post('username'),
 					'email'=>$this->input->post('email'),
-					'phoneno'=>$this->input->post('phoneno'),
-					'password'  =>md5(password_hash($this->input->post('password')), PASSWORD_DEFAULT),
+					'password' => password_hash($this->input->post('password'), PASSWORD_DEFAULT),
 					'status'=>'1'
 				);
 
@@ -214,10 +213,6 @@ class Frontend extends CI_Controller {
 					redirect(base_url('Frontend/registration'));
 				}
 
-				//$this->load->model('user_model');
-				//$this->user_model->insertuser('reg',$data);
-				//$this->session->set_flashdata('success','Successfully User Created');
-				//redirect(base_url().'index.php/Frontend/login');
 			}
 		
 				

@@ -1,5 +1,5 @@
 
-        <!--Site Footer Start-->
+<!--Site Footer Start-->
         <footer class="site-footer">
             <div class="container">
                 <div class="site-footer__top">
@@ -42,26 +42,35 @@
                                        
                                         <div class="col-xl-6 col-lg-6 col-md-4 wow fadeInUp" data-wow-delay="300ms">
                                             <div class="footer-widget__column footer-widget__contact clearfix">
-                                                <h3 class="footer-widget__title">Contact</h3>
-                                                <a href="mailto:Admin@noitavonne..com">Admin@noitavonne.com</a>
-                                                <p class="footer-widget__contact-text">8Noitavonne Corporate 2121 s.
+                                                <h3 class="footer-widget__title">Contact Here</h3>
+                                                <p class="footer-widget__contact-text">
+                                                <!-- <i class="fas fa-map-marker-alt"></i> -->
+                                                    Address:8Noitavonne Corporate 2121 s.
                                                     Columbia Ave
                                                     Suite 103 Tulsa <br>Oklahoma 74114
                                                 </p>
+                                                <a href="mailto:polypaper529@gmail.com">
+                                                <!-- <i class="fa fa-envelope"></i> -->
+                                                polypaper529@gmail.com 
+                                                   </a><br>
+                                                <a href="tel:092091 55153">
+                                                <!-- <i class='fas fa-phone-alt'></i> -->
+                                                092091 55153</a>
+                                               
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="site-footer__top-contact-details wow fadeInUp" data-wow-delay="400ms">
                                     <div class="site-footer__top-right-social">
-                                        <a href="https://www.gmail.com"><i class="fab fa-google"></i></a>
                                         <a href="https://www.facebook.com/Polypaper-111166208147957"><i class="fab fa-facebook"></i></a>
+                                        <a href="https://www.gmail.com"><i class="fab fa-google"></i></a>
                                         <a href="https://www.youtube.com/channel/UCxFGehcQ25CzM-2QWaBT-mw"><i class="fab fa-youtube"></i></a>
                                         <a href="https://www.instagram.com/laelalexander6/"><i class="fab fa-instagram"></i></a>
                                           </div>
                                     <div class="site-footer__top-right-phone">
                                         <p class="site-footer__top-right-phone-tagline">Call Anytime</p>
-                                        <a href="tel:+1 8328667421"></a>
+                                        <a href="tel:+1 8328667421">+1 8328667421</a>
                                     </div>
                                 </div>
                             </div>
@@ -156,7 +165,6 @@
 
     <!-- template js -->
     <script src="<?php echo base_url();?>/assets/js/conult.js"></script>
-
 
 </body>
 
