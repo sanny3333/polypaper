@@ -8,4 +8,10 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('welcome_message');
 	}
+	public function send_email() 
+	{
+
+		$send = send_mail('patilkirtiraj1617@gamil.com',"hi");
+		print_r($send);die();
+	}
 }

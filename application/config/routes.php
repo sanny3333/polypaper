@@ -56,5 +56,6 @@ $route['translate_uri_dashes'] = FALSE;
 //login and register
 $route['login']='frontend/login';
 $route['register']='frontend/registernow';
+$route['send_mail']='Welcome/send_email';
 
 // $route['test-test']='frontend/registernow';

@@ -15,10 +15,11 @@
                                 <div class="site-footer__top-newsletter">
                                     <h5 class="site-footer__top-newsletter-title">Subsrcibe for Latest Articles and
                                         Resources</h5>
-                                    <form class="site-footer__top-newsletter-form">
+                                    <form class="site-footer__top-newsletter-form" action="<?php echo base_url("send_mail");?>" method="post">
+                                        
                                         <div class="site-footer__top-newsletter-input-box">
                                             <input type="email" placeholder="Email Address" name="email">
-                                            <button type="submit" class="site-footer__top-newsletter-btn">Subscribe</button>
+                                            <button type="submit" class="site-footer__top-newsletter-btn" name="Subscribe"> Subscribe</button>
                                         </div>
                                     </form>
                                 </div>
