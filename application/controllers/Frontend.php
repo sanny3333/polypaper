@@ -175,9 +175,9 @@ class Frontend extends CI_Controller {
 			// $this->form_validation->set_rules('username','User Name','trim|required|alpha');
 			$this->form_validation->set_rules('username','Username','required|alpha');
 			// $this->form_validation->set_rules('email','Email','trim|required|valid_email|is_unique[reg.email]');
-			$this->form_validation->set_rules('email','Email','required|is_unique[reg.email]');
-			$this->form_validation->set_rules('phoneno','Phone','required');
-			$this->form_validation->set_rules('mobile', 'Mobile Number', 'trim|required|numeric'); 
+			$this->form_validation->set_rules('email','Email','required');
+		
+			$this->form_validation->set_rules('mobile', 'Mobile Number', 'required|numeric'); 
 			// $this->form_validation->set_rules('password','Password','trim|required|sha1');
 			$this->form_validation->set_rules('password','Password','required');
 
@@ -195,6 +195,7 @@ class Frontend extends CI_Controller {
 				$data = array(
 					'username'=>$this->input->post('username'),
 					'email'=>$this->input->post('email'),
+					'phoneno'=>$this->input->post('mobile'),
 					'password' => password_hash($this->input->post('password'), PASSWORD_DEFAULT),
 					'status'=>'1'
 				);
@@ -252,7 +253,7 @@ class Frontend extends CI_Controller {
 			
             // Get the user's data
             $user = $this->User_model->checkPassword($email,$password);
-			$hashed_p=md5($password);
+			
             // If the user exists and the password is correct
             if ($user) {
                 // Log the user in
@@ -264,17 +265,17 @@ class Frontend extends CI_Controller {
 				if (!$login_attempt_count) {
 					$login_attempt_count = 0;
 				}
-	
+				
 				// Increment the login attempt count
 				$login_attempt_count++;
 	
 				// Set the login attempt count in the session
 				$this->session->set_userdata('login_attempt_count', $login_attempt_count);
-	
+				
 				// Check the login attempt count
 				if ($login_attempt_count >= 3) {
 					// Lock the user's account
-					$this->user_model->lock_user($user['user_id'], time() + 300); // Lock the user for 5 minutes
+					$this->User_model->lock_user($user['user_id'], time() + 300); // Lock the user for 5 minutes
 	
 					// Redirect the user to the login page with an error message
 					$this->load->view('templates/header');
