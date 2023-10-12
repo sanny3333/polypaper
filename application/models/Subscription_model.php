@@ -47,7 +47,7 @@ class Subscription_model extends CI_Model
             $mail->Host = 'smtp.gmail.com';
             $mail->SMTPAuth = true;
             $mail->Username = 'patilkirtiraj1617@gmail.com'; // Your Gmail email address
-            $mail->Password = 'sddn frdb gegq tpdh'; // Your Gmail password or App Password
+            $mail->Password = 'vqceeutmbrffetai'; // Your Gmail password or App Password
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
 
             $mail->Port = 465;

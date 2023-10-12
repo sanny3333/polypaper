@@ -282,29 +282,31 @@ class Frontend extends CI_Controller {
 	}
 	public function send_emails_to_subscribers() {
         // Call the send_mail function from the Subscription_model
-        $this->Subscription_model->send_mail();
+        // $this->Subscription_model->send_mail();
         
         // Optionally, you can redirect or display a success message
         $data['message'] = 'Emails sent successfully to subscribers.';
         $this->load->view('success_view', $data);
     }
 	public function send_email() 
-	{
-		print_r($send);die();
+	{   
+		$this->load->library('email');
+			
+		
 
 		$send = send_mail('patilkirtiraj1617@gmail.com',"hellokjh");
 		print_r($send);die();
-			// Load the Email library and PHP Mailer library
-			$this->load->library('email');
+			//Load the Email library and PHP Mailer library
 			
 		
-			// Load the SubscriberModel
+			//Load the SubscriberModel
 			$this->load->model('Subscription_model');
 		
-			// Get the email address from the subscription form
-			$email = $this->input->post('email'); // Assuming the form field is named 'email'
+			//Get the email address from the subscription form
+			$email = $this->input->post('email');
+			 // Assuming the form field is named 'email'
 		    
-			// Validate the email address (you can add more validation)
+			//Validate the email address (you can add more validation)
 			if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 				// Handle invalid email address
 				echo 'Invalid email address.';
@@ -313,25 +315,25 @@ class Frontend extends CI_Controller {
 		
 			// Check if the email address is already subscribed
 			if ($this->Subscription_model->isSubscribed($email)) {
-				// Handle case where the email address is already subscribed
+				
 				echo 'Email address is already subscribed.';
 				return;
 			}
-			else{
+			 else{
 		
 			// Insert the subscriber's email into the database
-			$inserted = $this->Subscription_model->insertSubscriber($email);
+			 $inserted = $this->Subscription_model->insertSubscriber($email);
 			
 			}
 		
 			if ($inserted) {
 				// Send a confirmation email
-				$this->Subscription_model->sendConfirmationEmail($email);
+				 $this->Subscription_model->sendConfirmationEmail($email);
 				
 				// Display a success message or redirect
 				echo 'Subscription successful. Check your email for confirmation.';
 			} else {
-				// Handle database insertion error
+				//  Handle database insertion error
 				echo 'Subscription failed. Please try again later.';
 			}
 
@@ -343,8 +345,6 @@ class Frontend extends CI_Controller {
 	
 
 }
-
-
 
 
 

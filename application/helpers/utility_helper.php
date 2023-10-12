@@ -2,7 +2,6 @@
 
 <?php
 
-
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 function send_mail($to_email,$message) {
@@ -35,6 +34,7 @@ function send_mail($to_email,$message) {
 
 }
 //application/helpers/utility_helper.php
+
 
 
 
