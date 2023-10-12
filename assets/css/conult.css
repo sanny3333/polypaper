@@ -350,7 +350,7 @@ ul {
   right: 0;
   height: 1px;
   content: "";
-  background-color: rgba(var(--conult-white-rgb), 0.1);
+  background-color:var(--conult-white);
   z-index: -1;
 }
 
@@ -7950,7 +7950,11 @@ a:hover
   color: #ffffff;
   margin-right: 10px;
   font-size: 16px;
+  border-radius: var(--conult-black);
 }
+
+
+
 
 
 

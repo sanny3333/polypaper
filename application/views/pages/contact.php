@@ -1,3 +1,11 @@
+<style>
+    .center-recaptcha {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px; /* Adjust the height as needed */
+    }
+</style>
 <section class="page-header">
     <div class="page-header-bg"
         style="background-image: url(<?php echo base_url();?>/assets/images/backgrounds/backimage1.jpg)">
@@ -88,8 +96,8 @@
                         <div class="row">
                             <div class="col-xl-6">
                                 <div class="comment-form__input-box">
-                                    <input type="text" placeholder="Your Name" name="name" required
-                                        maxlength="20" required minlength="3" required />
+                                    <input type="text" placeholder="Your Name" name="name" required maxlength="20"
+                                        required minlength="3" required />
 
                                 </div>
                             </div>
@@ -112,18 +120,41 @@
                                     <input type="text" placeholder="Subject" name="subject" required />
                                 </div>
                             </div>
+
                         </div>
                         <div class="row">
                             <div class="col-xl-12">
                                 <div class="comment-form__input-box">
                                     <textarea name="message" placeholder="Write a Message" required></textarea>
                                 </div>
-                                <button type="submit" class="thm-btn comment-form__btn">send a message</button>
+                            </div>
+                            <div class="col-xl-12">
+                                <div class="mb-3 center-recaptcha">
+                                    <div class="g-recaptcha responsive-recaptcha w-auto mx-auto"
+                                        data-sitekey="6LdJVnooAAAAAI2jrv3ERhFEvViMcGzBI42C96sw"></div>
+                                </div>
+
                             </div>
                         </div>
-                    </form>
+                        <button type="submit" class="thm-btn comment-form__btn">send a message</button>
                 </div>
             </div>
+            <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+            </form>
         </div>
     </div>
+    </div>
+    </div>
 </section>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var form = document.querySelector("form");
+        form.addEventListener("submit", function(event) {
+            var captchaResponse = grecaptcha.getResponse();
+            if (captchaResponse.length === 0) {
+                event.preventDefault(); // Prevent the form from submitting
+                alert("Please complete the reCAPTCHA.");
+            }
+        });
+    });
+</script>   

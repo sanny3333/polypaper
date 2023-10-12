@@ -206,7 +206,9 @@ class Frontend extends CI_Controller {
 				if($checking)
 				{
 					$this->session->set_flashdata('error','Registered Successfully.! Go to login');
+					$this->load->view('templates/header');
 					$this->load->view('login');
+				$this->load->view('templates/footer');
 				}
 				else
 				{
@@ -239,6 +241,7 @@ class Frontend extends CI_Controller {
 		
         if ($this->form_validation->run() == FALSE) {
             // Display the login form
+			
 			$this->load->view('templates/header');
 			$this->load->view('login');
 			$this->load->view('templates/footer');
@@ -257,6 +260,7 @@ class Frontend extends CI_Controller {
             // If the user exists and the password is correct
             if ($user) {
                 // Log the user in
+				
 				$this->load->view('templates/header');
 				$this->load->view('login', array('error' => 'Login successfully.'));
 				$this->load->view('templates/footer');
@@ -287,6 +291,7 @@ class Frontend extends CI_Controller {
 					$this->load->view('login', array('error' => 'Invalid username or password.'));
 					$this->load->view('templates/footer');
 				}
+				
                 // Display an error message
                 //$this->load->view('login', ['error' => 'Invalid username or password.']);
             }
@@ -319,9 +324,6 @@ class Frontend extends CI_Controller {
 		session_destroy();
 		redirect(base_url('index.php/Frontend/login'));
 	}
+
+	
 }
-
-
-
-
-

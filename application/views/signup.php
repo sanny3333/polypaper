@@ -2,9 +2,17 @@
 <html lang="en">
 
 <head>
+
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
 
     <!-- Bootstrap CSS -->
     <link href="<?php echo base_url();?>/assets/vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet"
@@ -19,6 +27,21 @@
             transform: scale(0.77);
             transform-origin: 0 0;
         }
+    }
+
+    span {
+        position: absolute;
+        right: 15px;
+        transform: translate(0, -50%);
+        top: 50%;
+        cursor: pointer;
+        margin-top: 26px;
+        margin-right: 12px;
+    }
+
+    .fa {
+        font-size: 20px;
+        color: #7a797e;
     }
     </style>
 
@@ -41,38 +64,80 @@
         </div>
     </section>
 
-		<div class="container">
-			<div class="row">
-				<div class="col-md-4"></div>
-				<div class="col-md-4">
-					<div class="card" style="margin-top: 30px">
-					  <div class="card-header text-center">
-					    Register Now
-					  </div>
-					  <div class="card-body">
-					   <form method="POST"  action="<?php echo base_url();?>Frontend/registerNow">
-					   	<div class="mb-3">
-						    <label for="exampleInputEmail1" class="form-label">Name</label>
-						    <input type="text" placeholder="User Name" name="username" class="form-control" id="name" aria-describedby="name">
-						    <small><?php echo form_error('username'); ?></small>
-						  </div>
-						  <div class="mb-3">
-						    <label for="exampleInputEmail1" class="form-label">Email address</label>
-						    <input type="email"  placeholder="Email Address" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-						 	<small><?php echo form_error('email'); ?></small>
-						  </div>
-						  <div class="mb-3">
-						    <label for="exampleInputPassword1" class="form-label">Password</label>
-						    <input type="password" name="password"  placeholder="User Password"  class="form-control" id="exampleInputPassword1">
-							<small><?php echo form_error('password'); ?></small>
-						  </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header text-center">
+                        Register Now
+                    </div>
+                    <div class="card-body">
+                        <form id="signup-form" action="<?php echo base_url();?>frontend/registernow" method="post">
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Name</label>
+                                <input type="text" placeholder="User Name" name="username" class="form-control"
+                                    id="name" aria-describedby="name" pattern="[a-zA-Z]*" required maxlength="20"
+                                    required minlength="3" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                <input type="email" placeholder="Email Address" name="email" class="form-control"
+                                    id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputMobile" class="form-label">Mobile Number</label>
+                                <input type="text" placeholder="Mobile Number" name="mobile" class="form-control"
+                                    id="exampleInputMobile" pattern="[6789][0-9]{9}" required maxlength="10" required
+                                    minlength="10" title="Please enter valid phone number" required>
+                            </div>
 
-                            <div class="text-center">
-                                <button type="submit" value="submit" class="btn btn-primary">Register Now</button>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Password</label>
+                                <div class="d-flex justify-center">
+                                    <input type="password" name="password" placeholder="User Password"
+                                        class="form-control" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                                        required minlength="8" autocomplete="current-password" required>
+                                    <span>
+                                        <i class="fa fa-eye" aria-hidden="true" id="eye" onclick="toggle()"></i>
+                                    </span>
+
+                                </div>
                             </div>
-                            <div class="text-center">
-                                <a href="<?php echo site_url();?>/frontend/login">login </a>
+
+                            <div class="mb-3">
+                                <label for="exampleInputConfirmPassword" class="form-label">Confirm Password</label>
+                                <input type="password" name="confirm_password" placeholder="Confirm Password"
+                                    class="form-control" id="confirm_password" required minlength="8" required>
+
                             </div>
+                            <div>
+                                <div class="mb-3">
+                                    <div class="mb-3">
+                                        <div class="g-recaptcha responsive-recaptcha "
+                                            data-sitekey="6LdJVnooAAAAAI2jrv3ERhFEvViMcGzBI42C96sw"></div>
+                                    </div>
+
+                                </div>
+                                <div class="mb-3 position-relative">
+                                    <label class="form-check-label" for="form2Example3">
+                                        <input class="form-check-input me-2" type="checkbox" value=""
+                                            id="form2Example3c" required>
+                                        I agree all statements in <a href="#!"><u>Terms of service</u></a>
+                                    </label>
+                                </div>
+
+                                <!-- <div class="text-center">
+                                    <button type="submit" value="submit" class="btn btn-primary">Register Now</button>
+                                </div> -->
+                                <div class="text-center">
+                                    <button type="submit" value="submit" class="btn btn-primary" onclick="showSweetAlert()">Register
+                                        Now</button>
+                                </div>
+
+                                <div class="text-center">
+                                    <a href="<?php echo site_url();?>/frontend/login">login </a>
+                                </div>
 
                         </form>
                         <script>
@@ -102,23 +167,8 @@
                                 displayErrorMessage("name-error", "Name is required.");
                                 return false;
                             }
-                            if (name == (name)) {
-                                displayErrorMessage("name-error", "Only alphabets Allowed.");
-                                return false;
-                            }
                         }
-                        var password = document.getElementById("password"),
-                            confirm_password = document.getElementById("confirm_password");
-
-                        function validatePassword() {
-                            if (password.value != confirm_password.value) {
-                                confirm_password.setCustomValidity("Passwords Don't Match");
-                            } else {
-                                confirm_password.setCustomValidity('');
-                            }
-                        }
-                        password.onchange = validatePassword;
-                        confirm_password.onkeyup = validatePassword;
+                         
                         </script>
 
                         <script type="text/javascript">
@@ -159,8 +209,50 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
+    <script src="cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+
 
 
 </body>
 
 </html>
+<script>
+var state = false;
+
+function toggle() {
+    if (state) {
+        document.getElementById("password").setAttribute("type", "password");
+        document.getElementById("eye").style.color = '#7a797e';
+        state = false;
+    } else {
+        document.getElementById("password").setAttribute("type", "text");
+        document.getElementById("eye").style.color = '#5887ef';
+        state = true;
+    }
+}
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    var form = document.querySelector("form");
+    form.addEventListener("submit", function(event) {
+        var captchaResponse = grecaptcha.getResponse();
+        if (captchaResponse.length === 0) {
+            event.preventDefault(); // Prevent the form from submitting
+            alert("Please complete the reCAPTCHA.");
+        }
+    });
+});
+</script>
+<!-- alert popup -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+function showSweetAlert() {
+    Swal.fire({
+        title: 'Registration successful!',
+        text: 'You have successfully registered.',
+        icon: 'success',
+        confirmButtonColor: '#3085d6',
+        confirmButtonText: 'OK'
+    });
+}
+</script>
