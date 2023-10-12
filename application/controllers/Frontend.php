@@ -210,8 +210,8 @@ class Frontend extends CI_Controller {
 				}
 				else
 				{
-					$this->session->set_flashdata('error','Something went wrong');
-					redirect(base_url('Frontend/registration'));
+					$this->session->set_flashdata('status','Something went wrong');
+					redirect(base_url('/Frontend/registerNow'));
 				}
 
 			}

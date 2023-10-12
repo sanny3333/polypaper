@@ -41,58 +41,31 @@
         </div>
     </section>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4"></div>
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-header text-center">
-                        Register Now
-                    </div>
-                    <div class="card-body">
-                        <form id="signup-form" action="<?php echo base_url();?>frontend/registernow" method="post">
-                            <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label">Name</label>
-                                <input type="text" placeholder="User Name" name="username" class="form-control"
-                                    id="name" aria-describedby="name" pattern="[a-zA-Z]*" required maxlength="20" required
-                                    minlength="3" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label">Email address</label>
-                                <input type="email" placeholder="Email Address" name="email" class="form-control"
-                                    id="exampleInputEmail1" aria-describedby="emailHelp" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="exampleInputMobile" class="form-label">Mobile Number</label>
-                                <input type="text" placeholder="Mobile Number" name="mobile" class="form-control"
-                                    id="exampleInputMobile" pattern="[6789][0-9]{9}" required maxlength="10" required
-                                    minlength="10" title="Please enter valid phone number" required>
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="exampleInputPassword1" class="form-label">Password</label>
-                                <input type="password" name="password" placeholder="User Password" class="form-control"
-                                    id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required minlength="8"
-                                    required>
-                                <small style="font-size:15px">Please Use at least 8 characters(uppercase and lowercase)
-                                    &amp; symbol</small>
-                            </div>
-                            <div class="mb-3">
-                                <label for="exampleInputConfirmPassword" class="form-label">Confirm Password</label>
-                                <input type="password" name="confirm_password" placeholder="Confirm Password"
-                                    class="form-control" id="confirm_password" required minlength="8" required>
-                            </div>
-                            <div>
-                                <div class="mb-3">
-                                    <div class="g-recaptcha" data-sitekey="6LdJVnooAAAAAI2jrv3ERhFEvViMcGzBI42C96sw"
-                                    ></div>
-                                </div>
-                                <div class="mb-3 position-relative">
-                                <label class="form-check-label" for="form2Example3">
-                                <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3c" required>
-                                    I agree all statements in <a href="#!"><u>Terms of service</u></a>
-                                </label>
-                            </div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4"></div>
+				<div class="col-md-4">
+					<div class="card" style="margin-top: 30px">
+					  <div class="card-header text-center">
+					    Register Now
+					  </div>
+					  <div class="card-body">
+					   <form method="POST"  action="<?php echo base_url();?>Frontend/registerNow">
+					   	<div class="mb-3">
+						    <label for="exampleInputEmail1" class="form-label">Name</label>
+						    <input type="text" placeholder="User Name" name="username" class="form-control" id="name" aria-describedby="name">
+						    <small><?php echo form_error('username'); ?></small>
+						  </div>
+						  <div class="mb-3">
+						    <label for="exampleInputEmail1" class="form-label">Email address</label>
+						    <input type="email"  placeholder="Email Address" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+						 	<small><?php echo form_error('email'); ?></small>
+						  </div>
+						  <div class="mb-3">
+						    <label for="exampleInputPassword1" class="form-label">Password</label>
+						    <input type="password" name="password"  placeholder="User Password"  class="form-control" id="exampleInputPassword1">
+							<small><?php echo form_error('password'); ?></small>
+						  </div>
 
                             <div class="text-center">
                                 <button type="submit" value="submit" class="btn btn-primary">Register Now</button>
