@@ -6,7 +6,7 @@
                     <h2>Blog Details</h2>
                     <ul class="thm-breadcrumb list-unstyled">
                         <li><a href="<?php echo site_url();?>/frontend/index">Home</a></li>
-                        <li class="active">Blog</li>
+                        <li>Blog</li>
                     </ul>
                 </div>
             </div>
@@ -20,7 +20,7 @@
                     <div class="col-xl-12 col-lg-11">
                         <div class="news-details__left">
                             <div class="news-details__img">
-                                <img src="<?php echo base_url();?>/assets/images/blog/blog6.jpg" alt="">
+                                <img src="<?php echo base_url();?>/assets/images/blog/blog7.jpg" alt="">
                                 <div class="news-details__date-box">
                                     <p>20 Oct</p>
                                 </div>

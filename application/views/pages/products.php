@@ -6,7 +6,7 @@
                     <h2>Products</h2>
                     <ul class="thm-breadcrumb list-unstyled">
                         <li><a href="<?php echo site_url();?>/frontend/index">Home</a></li>
-                        <li class="active">Products</li>
+                        <li>Products</li>
                     </ul>
                 </div>
             </div>
@@ -76,7 +76,7 @@
                         <!--News One Single-->
                         <div class="news-one__single">
                             <div class="news-one__img">
-                                <img src="<?php echo base_url();?>/assets/images/product/product3.jpg" alt="">
+                                <img src="<?php echo base_url();?>/assets/images/product/product_3.jpg" alt="">
                                 <a href="<?php echo site_url();?>/frontend/product3">
                                     <span class="news-one__plus"></span>
                                 </a>
@@ -102,7 +102,7 @@
                         <!--News One Single-->
                         <div class="news-one__single">
                             <div class="news-one__img">
-                                <img src="<?php echo base_url();?>/assets/images/product/product4_card.jpeg" alt="">
+                                <img src="<?php echo base_url();?>/assets/images/product/product4_card.jpg" alt="">
                                 <a href="<?php echo site_url();?>/frontend/product4">
                                     <span class="news-one__plus"></span>
                                 </a>
@@ -126,7 +126,7 @@
                         <!--News One Single-->
                         <div class="news-one__single">
                             <div class="news-one__img">
-                                <img src="<?php echo base_url();?>/assets/images/product/product5_card.jpeg" alt="">
+                                <img src="<?php echo base_url();?>/assets/images/product/product_5_card.jpg" alt="">
                                 <a href="<?php echo site_url();?>/frontend/product5">
                                     <span class="news-one__plus"></span>
                                 </a>
@@ -151,7 +151,7 @@
                         <!--News One Single-->
                         <div class="news-one__single">
                             <div class="news-one__img">
-                                <img src="<?php echo base_url();?>/assets/images/product/product6_card.jpg" alt="">
+                                <img src="<?php echo base_url();?>/assets/images/product/product6__card.jpg" alt="">
                                 <a href="<?php echo site_url();?>/frontend/product6">
                                     <span class="news-one__plus"></span>
                                 </a>

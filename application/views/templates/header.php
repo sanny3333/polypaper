@@ -69,12 +69,22 @@
                         <div class="main-menu-wrapper__main-menu">
                             <a href="#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
                             <ul class="main-menu__list">
-                                <li> <a href="<?php echo base_url();?>frontend/index" class="nav-bar-link <?php if($this->uri->segment(2) == "index") echo "active" ?>">Home</a></li>
+
+                                <!-- <li><a href="<?php echo site_url();?>/frontend/index">Home</a></li>
+                                <li><a href="<?php echo site_url();?>/frontend/about">About</a></li>
+                                <li><a href="<?php echo site_url();?>/frontend/products">Products</a></li>
+                                <li><a href="<?php echo site_url();?>/frontend/blogs">Blogs</a></li>
+                                <li><a href="<?php echo site_url();?>/frontend/Giveacall">Give a call</a></li>
+                                <li><a href="<?php echo site_url();?>/frontend/contact">Contact</a></li> -->
+
+                                <li> <a href="<?php echo base_url();?>frontend/index" class="nav-bar-link <?php if($this->uri->segment(2) == "index" ||$this->uri->segment(2) == "") echo "active" ?>">Home</a></li>
                                 <li><a href="<?php echo base_url();?>frontend/about" class="nav-bar-link <?php if($this->uri->segment(2) == "about") echo "active" ?>">About</a></li>
-                                <li><a href="<?php echo base_url();?>frontend/products" class="nav-bar-link <?php if($this->uri->segment(2) == "products") echo "active" ?>">Products</a></li>
-                                <li><a href="<?php echo base_url();?>frontend/blogs" class="nav-bar-link <?php if($this->uri->segment(2) == "blogs") echo "active" ?>">Blogs</a></li>
-                                <li><a href="<?php echo base_url();?>frontend/Giveacall" class="nav-bar-link <?php if($this->uri->segment(2) == "login") echo "active" ?>">Give a call</a></li>
+                                <li><a href="<?php echo base_url();?>frontend/products" class="nav-bar-link <?php if($this->uri->segment(2) == "products" || $this->uri->segment(2) == "product1"|| $this->uri->segment(2) == "product2" || $this->uri->segment(2) == "product3" || $this->uri->segment(2) == "product4" || $this->uri->segment(2) == "product5" || $this->uri->segment(2) == "product6") echo "active" ?>">Products</a></li>
+                                <li><a href="<?php echo base_url();?>frontend/blogs" class="nav-bar-link <?php if($this->uri->segment(2) == "blogs"  || $this->uri->segment(2) =="blog1"|| $this->uri->segment(2) =="blog2" || $this->uri->segment(2) =="blog3" || $this->uri->segment(2) =="blog4" || $this->uri->segment(2) =="blog5" || $this->uri->segment(2) =="blog6") echo "active" ?>">Blogs</a></li>
                                 <li><a href="<?php echo base_url();?>frontend/contact" class="nav-bar-link <?php if($this->uri->segment(2) == "contact") echo "active" ?>">Contact</a></li>
+                                <li><a href="<?php echo base_url();?>frontend/Giveacall" class="nav-bar-link <?php if($this->uri->segment(2) == "login") echo "active" ?>">Sign In</a></li>
+                                <li><a href="<?php echo base_url();?>frontend/registration" class="nav-bar-link <?php if($this->uri->segment(2) == "registration") echo "active" ?>">Sign Up</a></li>
+
                                 <!-- <li><a href="news.html">News</a></li> -->
                             </ul>
                         </div>

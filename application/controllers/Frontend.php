@@ -146,11 +146,11 @@ class Frontend extends CI_Controller {
 			 $formArray['subject']=$this->input->post('subject');
 			 $formArray['message']=$this->input->post('message');
 			 $formArray['created_at']= date('Y-m-d');
-
-			 $this->Contact_model->create($formArray);
-			 $this->session->set_flashdata('success','Thank you !! We will meet soon.');
+			
+			$this->Contact_model->create($formArray);
+			$this->session->set_flashdata('success','Thank you !! We will meet soon.');
 			//  $this->session->set_flashdata('failure','contacted successfully !!!!.');
-			 redirect(base_url().'index.php/Frontend/contact');
+			redirect(base_url().'Frontend/contact');
 
 			 
 
@@ -176,18 +176,21 @@ class Frontend extends CI_Controller {
 		{
 			$this->form_validation->set_rules('username','User Name','required');
 			$this->form_validation->set_rules('email','Email','required');
+			// $this->form_validation->set_rules('password','Password','trim|required|sha1');
 			$this->form_validation->set_rules('password','Password','required');
+			$this->form_validation->set_rules('confirm_password', 'Confirm Password', 'trim|required|matches[password]'); 
 
 			if($this->form_validation->run()==TRUE)
 			{
-				$username = $this->input->post('username');
-				$email = $this->input->post('email');
-				$password = $this->input->post('password');
+				redirect(base_url('Frontend/login'));
+			}
+			else
+			{
 
 				$data = array(
-					'username'=>$username,
-					'email'=>$email,
-					'password'=>sha1($password),
+					'username'=>$this->input->post('username'),
+					'email'=>$this->input->post('email'),
+					'password'=> $this->input->post('password'),
 					'status'=>'1'
 				);
 				print_r($this->input->post());
@@ -197,9 +200,23 @@ class Frontend extends CI_Controller {
 
 
 				$this->load->model('user_model');
-				$this->user_model->insertuser('reg',$data);
-				$this->session->set_flashdata('success','Successfully User Created');
-				redirect(base_url().'Frontend/login');
+				$checking=$this->user_model->insertuser($data);
+				
+				if($checking)
+				{
+					$this->session->set_flashdata('success','Registered Successfully.! Go to login');
+					redirect(base_url('Frontend/login'));
+				}
+				else
+				{
+					$this->session->set_flashdata('status','Something went wrong');
+					redirect(base_url('/Frontend/register'));
+				}
+
+				//$this->load->model('user_model');
+				//$this->user_model->insertuser('reg',$data);
+				//$this->session->set_flashdata('success','Successfully User Created');
+				//redirect(base_url().'index.php/Frontend/login');
 			}
 		}
 	}
@@ -280,71 +297,9 @@ class Frontend extends CI_Controller {
 		session_destroy();
 		redirect(base_url('index.php/Frontend/login'));
 	}
-	public function send_emails_to_subscribers() {
-        // Call the send_mail function from the Subscription_model
-        // $this->Subscription_model->send_mail();
-        
-        // Optionally, you can redirect or display a success message
-        $data['message'] = 'Emails sent successfully to subscribers.';
-        $this->load->view('success_view', $data);
-    }
-	public function send_email() 
-	{   
-		$this->load->library('email');
-			
-		
-
-		$send = send_mail('patilkirtiraj1617@gmail.com',"hellokjh");
-		print_r($send);die();
-			//Load the Email library and PHP Mailer library
-			
-		
-			//Load the SubscriberModel
-			$this->load->model('Subscription_model');
-		
-			//Get the email address from the subscription form
-			$email = $this->input->post('email');
-			 // Assuming the form field is named 'email'
-		    
-			//Validate the email address (you can add more validation)
-			if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-				// Handle invalid email address
-				echo 'Invalid email address.';
-				return;
-			}
-		
-			// Check if the email address is already subscribed
-			if ($this->Subscription_model->isSubscribed($email)) {
-				
-				echo 'Email address is already subscribed.';
-				return;
-			}
-			 else{
-		
-			// Insert the subscriber's email into the database
-			 $inserted = $this->Subscription_model->insertSubscriber($email);
-			
-			}
-		
-			if ($inserted) {
-				// Send a confirmation email
-				 $this->Subscription_model->sendConfirmationEmail($email);
-				
-				// Display a success message or redirect
-				echo 'Subscription successful. Check your email for confirmation.';
-			} else {
-				//  Handle database insertion error
-				echo 'Subscription failed. Please try again later.';
-			}
-
-			    
-		
-
-	}
-
-	
-
 }
+
+
 
 
 

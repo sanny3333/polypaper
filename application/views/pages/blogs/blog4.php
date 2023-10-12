@@ -6,7 +6,7 @@
                     <h2>Blog Details</h2>
                     <ul class="thm-breadcrumb list-unstyled">
                         <li><a href="<?php echo site_url();?>/frontend/index">Home</a></li>
-                        <li class="active">Blog</li>
+                        <li>Blog</li>
                     </ul>
                 </div>
             </div>
