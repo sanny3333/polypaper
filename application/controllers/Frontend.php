@@ -293,9 +293,6 @@ class Frontend extends CI_Controller {
 		session_destroy();
 		redirect(base_url('index.php/Frontend/login'));
 	}
+
+	
 }
-
-
-
-
-

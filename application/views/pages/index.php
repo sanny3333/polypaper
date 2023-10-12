@@ -227,7 +227,7 @@
         <br>
         <div class="section-title text-center">
             <!-- <span class="section-title__tagline">our feedback list</span>   -->
-            <h2 class="section-title__title">Some Statistics</h2>
+            <h2 class="section-title__title">Analytical Results</h2>
         </div>
 
 
