@@ -79,11 +79,9 @@
                                 <a href="<?php echo site_url();?>/frontend/registration">Sign Up</a>
                             </div>
 
-                            <?php
-						if($this->session->flashdata('error')) {	?>
-                            <p class="text-danger text-center" style="margin-top: 10px;">
-                                <?=$this->session->flashdata('error')?></p>
-                            <?php } ?>
+                            <?php if (isset($error)) : ?>
+                                <p style="color: red;"><?php echo $error; ?></p>
+                            <?php endif; ?>
 
                         </form>
                     </div>
@@ -93,6 +91,7 @@
         </div>
     </div>
 
+		
 
     <!-- Optional JavaScript; choose one of the two! -->
 
@@ -123,4 +122,24 @@ function toggle() {
         state = true;
     }
 }
+</script>
+<script>
+    $.ajax({
+    url: '/login',
+    type: 'POST',
+    data: {
+        username: $('#username').val(),
+        password: $('#password').val(),
+    },
+    success: function(response) {
+        if (response.status === 'success') {
+            // The user is logged in
+            window.location.href = '/login';
+        } else {
+            // The user credentials are invalid
+            window.location.href = '/index';
+           // alert(response.message);
+        }
+    }
+});
 </script>
