@@ -7952,6 +7952,9 @@ a:hover
   font-size: 16px;
   border-radius: var(--conult-black);
 }
+.bg-primary{
+  margin-top: 10%;
+}
 
 
 
