@@ -11,7 +11,7 @@ class Welcome extends CI_Controller {
 	public function send_email() 
 	{
 
-		$send = send_mail('sanrajchougale1429@gmail.com',"hi");
+		$send = send_mail('patilkirtiraj1617@gmail.com',"Thank you for subscribe to our website👍,visit again!!😊 & Thank you for choosing to stay connected with us.we're exicted to keep you informed and engaged with our website's content.If you have any question,feeback, or suggestions,please don't hesitate to reach out to us at[contact email]. we value your input and forward to serving you better.");
 		print_r($send);die();
 	}
 }

@@ -131,7 +131,8 @@
                                     <button type="submit" value="submit" class="btn btn-primary">Register Now</button>
                                 </div> -->
                                 <div class="text-center">
-                                    <button type="submit" value="submit" class="btn btn-primary" onclick="showSweetAlert()">Register
+                                    <button type="submit" value="submit" class="btn btn-primary"
+                                        onclick="showSweetAlert()">Register
                                         Now</button>
                                 </div>
 
@@ -168,7 +169,6 @@
                                 return false;
                             }
                         }
-                         
                         </script>
 
                         <script type="text/javascript">
@@ -242,17 +242,4 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
-</script>
-<!-- alert popup -->
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script>
-function showSweetAlert() {
-    Swal.fire({
-        title: 'Registration successful!',
-        text: 'You have successfully registered.',
-        icon: 'success',
-        confirmButtonColor: '#3085d6',
-        confirmButtonText: 'OK'
-    });
-}
 </script>
