@@ -191,12 +191,13 @@ class Frontend extends CI_Controller {
 			}
 			else
 			{
-				
+				$hpassword=$this->input->post('password');
+				$hash_password = hash('sha256', $hpassword);
 				$data = array(
 					'username'=>$this->input->post('username'),
 					'email'=>$this->input->post('email'),
 					'phoneno'=>$this->input->post('mobile'),
-					'password' => password_hash($this->input->post('password'), PASSWORD_DEFAULT),
+					'password' => $hash_password,
 					'status'=>'1'
 				);
 
@@ -265,28 +266,7 @@ class Frontend extends CI_Controller {
 				$this->load->view('login', array('error' => 'Login successfully.'));
 				$this->load->view('templates/footer');
             } else {
-				$login_attempt_count = $this->session->userdata('login_attempt_count');
-				if (!$login_attempt_count) {
-					$login_attempt_count = 0;
-				}
 				
-				// Increment the login attempt count
-				$login_attempt_count++;
-	
-				// Set the login attempt count in the session
-				$this->session->set_userdata('login_attempt_count', $login_attempt_count);
-				
-				// Check the login attempt count
-				if ($login_attempt_count >= 3) {
-					// Lock the user's account
-					$this->User_model->lock_user($user['user_id'], time() + 300); // Lock the user for 5 minutes
-	
-					// Redirect the user to the login page with an error message
-					$this->load->view('templates/header');
-					$this->load->view('login', array('error' => 'Your account has been locked due to too many failed login attempts.'));
-					$this->load->view('templates/footer');
-						} 
-				else{
 					$this->load->view('templates/header');
 					$this->load->view('login', array('error' => 'Invalid username or password.'));
 					$this->load->view('templates/footer');
@@ -296,7 +276,6 @@ class Frontend extends CI_Controller {
                 //$this->load->view('login', ['error' => 'Invalid username or password.']);
             }
         
-		    }
 
 						
 		 

@@ -9,15 +9,17 @@ class User_model extends CI_Model {
 	
 	function checkPassword($email,$password)
 	{
-        $hashed_password = $this->db->get('reg', ['password'], ['username' => $username])->row()->password;
-
-        // Verify the user's password.
-        if (password_verify($password, $hashed_password))
-         {
+        $pass = hash('sha256', $password);
+        $this->db->where('email', $email);
+        $this->db->where('password', $pass);
+        $query = $this->db->get('reg');
+        if ($query->num_rows() > 0) {
             return $query->row();
-        }else {
-            return null;
-        }
+
+            }else{
+                return false;
+
+            }
 
 	}
 	public function lock_user($user_id, $duration = 300) {
