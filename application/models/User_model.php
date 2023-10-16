@@ -7,12 +7,14 @@ class User_model extends CI_Model {
 		return $this->db->insert('reg',$data);
 	}
 	
-	function checkPassword($email,$password)
+	function checkPassword($username,$password)
 	{
         $pass = hash('sha256', $password);
-        $this->db->where('email', $email);
-        $this->db->where('password', $pass);
-        $query = $this->db->get('reg');
+        $query = "SELECT * FROM users WHERE name = '$username' OR email='$email'AND password = '$password'";
+
+        //$this->db->where('email', $email);
+        //$this->db->where('password', $pass);
+        //$query = $this->db->get('reg');
         if ($query->num_rows() > 0) {
             return $query->row();
 

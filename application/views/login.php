@@ -56,10 +56,10 @@
                         Login Now
                     </div>
                     <div class="card-body">
-                        <form method="post" autocomplete="off" action="<?php echo site_url();?>/frontend/loginNow">
+                        <form id='login-form'>
 
                             <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                <label for="exampleInputEmail1" class="form-label">Username</label>
                                 <input type="email" placeholder="Email Address" name="email" class="form-control"
                                     id="exampleInputEmail1" aria-describedby="emailHelp" required />
                             </div>
@@ -126,14 +126,14 @@ function toggle() {
 <script>
     // JavaScript code to handle the login form submission via AJAX
     $(document).ready(function () {
-        $('#login-btn').submit(function (e) {
+        $('#login-form').submit(function (e) {
             e.preventDefault();
             var username = $('#username').val();
             var password = $('#password').val();
 
             $.ajax({
                 type: 'POST',
-                url: base_url + 'login',
+                url: base_url + 'frontend/loginNow',
                 data: { username: username, password: password },
                 success: function (response) {
                     if (response === 'success') {
@@ -143,7 +143,7 @@ function toggle() {
                             position: "top-right",
                             timeOut: "5000",
                         });
-                        window.location.href = "http://localhost/polypaper/index.php/frontend/loginNow";
+                        window.location.href = "http://localhost/polypaper";
                         // base_url("register");
                        
 

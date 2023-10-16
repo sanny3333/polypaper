@@ -236,7 +236,7 @@ class Frontend extends CI_Controller {
 		 $this->load->library('form_validation');
 		 $this->load->helper('form');
         // Set the form validation rules
-        $this->form_validation->set_rules('email', 'Email', 'required');
+        $this->form_validation->set_rules('username', 'Username', 'required');
         $this->form_validation->set_rules('password', 'Password', 'required');
         // If the form validation fails
 		
@@ -249,15 +249,16 @@ class Frontend extends CI_Controller {
 			
         } else {
             // Validate the user's credentials
-            $email = $this->input->post('email');
+            $username = $this->input->post('username');
             $password = $this->input->post('password');
 			
             // Load the user model
             $this->load->model('User_model');
 			
             // Get the user's data
-            $user = $this->User_model->checkPassword($email,$password);
-			
+            $user = $this->User_model->checkPassword($username,$password);
+			print_r($user);
+			die;
             // If the user exists and the password is correct
             if ($user) {
                 // Log the user in
