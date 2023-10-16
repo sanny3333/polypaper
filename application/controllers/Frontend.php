@@ -280,8 +280,8 @@ class Frontend extends CI_Controller {
 
 						
 		 
-	}
-
+	
+		}
 	
 
 	function registration()

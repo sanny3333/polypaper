@@ -172,6 +172,9 @@
                             }
                         }
                          
+
+
+                        
                         </script>
 
                         <script type="text/javascript">
@@ -247,7 +250,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 </script>
 <!-- alert popup -->
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
 function showSweetAlert() {
     Swal.fire({
@@ -257,5 +260,5 @@ function showSweetAlert() {
         confirmButtonColor: '#3085d6',
         confirmButtonText: 'OK'
     });
-}
-</script>
+} -->
+</script> 
