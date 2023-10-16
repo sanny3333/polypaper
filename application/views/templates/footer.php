@@ -24,7 +24,30 @@
                                 </div>
                             </form>
 
-                           
+                            <script type="text/javascript">
+                                base_url = '<?php echo base_url(); ?>';
+                                $(document).ready(function () {
+                                    $('#signup-form').submit(function (event) {
+                                        event.preventDefault();
+
+                                        $.ajax({
+                                            url: '<?php echo base_url('storevalue'); ?>',
+                                            data: $('#signup-form').serialize(),
+                                            type: 'post',
+                                            async: false,
+                                            dataType: 'json',
+                                            success: function (response) {
+                                                // alert('Success');
+
+                                            },
+                                            error: function () {
+                                                alert('Error');
+                                            }
+                                        });
+                                    });
+                                });
+                            </script>
+
 
 
                         </div>

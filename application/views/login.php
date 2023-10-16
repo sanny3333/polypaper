@@ -73,7 +73,7 @@
                             </div>
 
                             <div class="text-center">
-                                <button type="submit" class="btn btn-primary">Login Now</button>
+                                <button type="submit" id="login-btn" class="btn btn-primary">Login Now</button>
                             </div>
                             <div class="text-center">
                                 <a href="<?php echo site_url();?>/frontend/registration">Sign Up</a>
@@ -124,22 +124,35 @@ function toggle() {
 }
 </script>
 <script>
-    $.ajax({
-    url: '/login',
-    type: 'POST',
-    data: {
-        username: $('#username').val(),
-        password: $('#password').val(),
-    },
-    success: function(response) {
-        if (response.status === 'success') {
-            // The user is logged in
-            window.location.href = '/login';
-        } else {
-            // The user credentials are invalid
-            window.location.href = '/index';
-           // alert(response.message);
-        }
-    }
-});
+    // JavaScript code to handle the login form submission via AJAX
+    $(document).ready(function () {
+        $('#login-btn').submit(function (e) {
+            e.preventDefault();
+            var username = $('#username').val();
+            var password = $('#password').val();
+
+            $.ajax({
+                type: 'POST',
+                url: base_url + 'login',
+                data: { username: username, password: password },
+                success: function (response) {
+                    if (response === 'success') {
+
+                        toastr.clear();
+                        Toast('Successfully login', "success", {
+                            position: "top-right",
+                            timeOut: "5000",
+                        });
+                        window.location.href = "http://localhost/polypaper/index.php/frontend/loginNow";
+                        // base_url("register");
+                       
+
+
+                    } else {
+                        toastr.error('Invalid username or password', 'Error');
+                    }
+                }
+            });
+        });
+    });
 </script>

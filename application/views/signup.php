@@ -109,6 +109,9 @@
                                 <label for="exampleInputConfirmPassword" class="form-label">Confirm Password</label>
                                 <input type="password" name="confirm_password" placeholder="Confirm Password"
                                     class="form-control" id="confirm_password" required minlength="8" required>
+                                    <span>
+                                        <i class="fa fa-eye" aria-hidden="true" id="eye" onclick="toggle()"></i>
+                                    </span>
 
                             </div>
                             <div>
