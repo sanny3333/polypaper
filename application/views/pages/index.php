@@ -311,7 +311,7 @@
                                 </div>
                                 <div class="news-one__content">
                                     <h3 class="news-one__title">
-                                        <a href="<?php echo site_url();?>/frontend/">Mexican Researchers Turn Old Plastic Bottles Into
+                                        <a href="<?php echo site_url();?>/frontend/blog1">Mexican Researchers Turn Old Plastic Bottles Into
                                             Waterproof Paper</a>
                                     </h3>
                                     <p class="news-one__text">Aellentesque porttitor lacus quis enim varius sed

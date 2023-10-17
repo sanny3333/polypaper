@@ -46,7 +46,7 @@ class Subscription extends CI_Controller
     {
         $this->load->model('Subscription_model');
         $this->Subscription_model->save_data();
-        $subscribe
+        $sub
         echo $subscribe;
 
     }

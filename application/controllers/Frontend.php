@@ -170,8 +170,8 @@ class Frontend extends CI_Controller {
 	function registerNow()
 	{
 
-		print_r($this->input->post());
-		die;
+		// print_r($this->input->post());
+		// die;
 		if($_SERVER['REQUEST_METHOD']=='POST')
 		{
 			$this->form_validation->set_rules('username','User Name','required');
@@ -198,19 +198,12 @@ class Frontend extends CI_Controller {
 				$data = array(
 					'username'=>$this->input->post('username'),
 					'email'=>$this->input->post('email'),
-<<<<<<< HEAD
 					'password'=> $this->input->post('password'),
 					'mobile'=>$this->input->post('mobile'),
 					'password' => password_hash($this->input->post('password'), PASSWORD_DEFAULT),
-=======
-					'phoneno'=>$this->input->post('mobile'),
-					'password' => $hash_password,
->>>>>>> 07563fec3af5e235f6fb18eeee3ea1a0bf8a92db
 					'status'=>'1'
 				);
-				print_r($this->input->post());
-				die;
-
+				
 
 
 
@@ -337,10 +330,7 @@ class Frontend extends CI_Controller {
                 //$this->load->view('login', ['error' => 'Invalid username or password.']);
             }
         
-<<<<<<< HEAD
 	}
-=======
->>>>>>> 07563fec3af5e235f6fb18eeee3ea1a0bf8a92db
 
 						
 		 

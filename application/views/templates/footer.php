@@ -14,6 +14,9 @@
                         <div class="site-footer__top-newsletter">
                             <h5 class="site-footer__top-newsletter-title">Subsrcibe for Latest Articles and
                                 Resources</h5>
+
+                            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
                             <form class="site-footer__top-newsletter-form" action="<?php echo base_url("send_mail"); ?>"
                                 method="post" id="Subscribe">
 
@@ -25,19 +28,20 @@
                             </form>
 
                             <script type="text/javascript">
-                                base_url = '<?php echo base_url(); ?>';
+
                                 $(document).ready(function () {
-                                    $('#signup-form').submit(function (event) {
+                                    $('#Subscribe').submit(function (event) {
                                         event.preventDefault();
 
                                         $.ajax({
-                                            url: '<?php echo base_url('storevalue'); ?>',
-                                            data: $('#signup-form').serialize(),
+                                            url: '<?php echo base_url(); ?>/AjaxController/submitData',
+                                            data: $('#Subscribe').serialize(),
                                             type: 'post',
                                             async: false,
                                             dataType: 'json',
                                             success: function (response) {
                                                 // alert('Success');
+                                                console.log"hhh";
 
                                             },
                                             error: function () {
@@ -47,8 +51,6 @@
                                     });
                                 });
                             </script>
-
-
 
                         </div>
                     </div>

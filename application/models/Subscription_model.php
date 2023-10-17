@@ -9,9 +9,9 @@ class Subscription_model extends CI_Model {
         // Return a success or error message
 
         if ($this->db->insert('subscriptions', $data)) {
-            return array('email' => 'Data saved successfully.');
+            return TRUE;
         } else {
-            return array('email' => 'Error saving data.');
+            return FALSE;
         }
     }
 }

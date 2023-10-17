@@ -18,10 +18,10 @@ function send_mail($to_email,$message) {
     $mail->SMTPSecure = 'ssl';
     $mail->Port = '465';
 
-    $mail->setfrom("patilkirtiraj1617@gmail.com", "polypaper");
+    $mail->setfrom("patilkirtiraj1617@gmail.com", "polypaper.org");
     $mail->addAddress($to_email);
     $mail->isHTML(true);
-    $mail->Subject = $subject;
+    // $mail->Subject = $message;
     $mail->Body = $message;
     
 
