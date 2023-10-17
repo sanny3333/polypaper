@@ -22,7 +22,7 @@
                             <div class="news-details__img">
                                 <img src="<?php echo base_url();?>/assets/images/blog/blog1.jpg" alt="">
                                 <div class="news-details__date-box">
-                                    <p>20 Oct</p>
+                                    <p>18 Aug</p>
                                 </div>
                             </div>
                             <div class="news-details__content">

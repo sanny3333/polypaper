@@ -27,7 +27,7 @@
                                     <span class="news-one__plus"></span>
                                 </a>
                                 <div class="news-one__date">
-                                    <p>20 oct</p>
+                                    <p>18 Aug</p>
                                 </div>
                             </div>
                             <div class="news-one__content">
@@ -55,7 +55,7 @@
                                     <span class="news-one__plus"></span>
                                 </a>
                                 <div class="news-one__date">
-                                    <p>20 oct</p>
+                                    <p>27 Aug</p>
                                 </div>
                             </div>
                             <div class="news-one__content">
@@ -81,7 +81,7 @@
                                     <span class="news-one__plus"></span>
                                 </a>
                                 <div class="news-one__date">
-                                    <p>20 oct</p>
+                                    <p>4 Sept</p>
                                 </div>
                             </div>
                             <div class="news-one__content">
@@ -109,7 +109,7 @@
                                     <span class="news-one__plus"></span>
                                 </a>
                                 <div class="news-one__date">
-                                    <p>20 oct</p>
+                                    <p>16 Sept</p>
                                 </div>
                             </div>
                             <div class="news-one__content">
@@ -136,7 +136,7 @@
                                     <span class="news-one__plus"></span>
                                 </a>
                                 <div class="news-one__date">
-                                    <p>20 oct</p>
+                                    <p>25 Sept</p>
                                 </div>
                             </div>
                             <div class="news-one__content">
@@ -164,7 +164,7 @@
                                     <span class="news-one__plus"></span>
                                 </a>
                                 <div class="news-one__date">
-                                    <p>20 oct</p>
+                                    <p>10 oct</p>
                                 </div>
                             </div>
                             <div class="news-one__content">
