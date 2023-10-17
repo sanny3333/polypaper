@@ -56,11 +56,11 @@
                         Login Now
                     </div>
                     <div class="card-body">
-                        <form id='login-form'>
+                        <form id='login-form' action="<?php echo base_url();?>frontend/loginnow" method="post">
 
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">Username</label>
-                                <input type="email" placeholder="Email Address" name="email" class="form-control"
+                                <input type="text" placeholder="Enter Email or Username" name="username" class="form-control"
                                     id="exampleInputEmail1" aria-describedby="emailHelp" required />
                             </div>
                             <div class="mb-3">

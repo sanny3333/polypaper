@@ -257,8 +257,7 @@ class Frontend extends CI_Controller {
 			
             // Get the user's data
             $user = $this->User_model->checkPassword($username,$password);
-			print_r($user);
-			die;
+
             // If the user exists and the password is correct
             if ($user) {
                 // Log the user in
