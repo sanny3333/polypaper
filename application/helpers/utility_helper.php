@@ -24,7 +24,7 @@ function send_mail($to_email,$message) {
     // $mail->Subject = $message;
     $mail->Body = $message;
     
-
+//print_r($mail->send());die();
     if ($mail->send()) {
         
         return true;
@@ -34,9 +34,3 @@ function send_mail($to_email,$message) {
 
 }
 //application/helpers/utility_helper.php
-
-
-
-
-
-

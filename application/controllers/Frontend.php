@@ -198,9 +198,8 @@ class Frontend extends CI_Controller {
 				$data = array(
 					'username'=>$this->input->post('username'),
 					'email'=>$this->input->post('email'),
-					'password'=> $this->input->post('password'),
-					'mobile'=>$this->input->post('mobile'),
-					'password' => password_hash($this->input->post('password'), PASSWORD_DEFAULT),
+					'phoneno'=>$this->input->post('mobile'),
+					'password' => $hash_password,
 					'status'=>'1'
 				);
 				
@@ -289,7 +288,7 @@ class Frontend extends CI_Controller {
 		 $this->load->library('form_validation');
 		 $this->load->helper('form');
         // Set the form validation rules
-        $this->form_validation->set_rules('email', 'Email', 'required');
+        $this->form_validation->set_rules('username', 'Username', 'required');
         $this->form_validation->set_rules('password', 'Password', 'required');
         // If the form validation fails
 		
@@ -301,17 +300,17 @@ class Frontend extends CI_Controller {
 			$this->load->view('templates/footer');
 			
         } else {
+
             // Validate the user's credentials
-            $email = $this->input->post('email');
+            $username = $this->input->post('username');
             $password = $this->input->post('password');
 			
             // Load the user model
             $this->load->model('User_model');
 			
             // Get the user's data
-            $user = $this->User_model->checkPassword($email,$password);
-			print_r($user);
-			die;
+            $user = $this->User_model->checkPassword($username,$password);
+//print_r($user);die()
             // If the user exists and the password is correct
             if ($user) {
                 // Log the user in
@@ -324,18 +323,18 @@ class Frontend extends CI_Controller {
 					$this->load->view('templates/header');
 					$this->load->view('login', array('error' => 'Invalid username or password.'));
 					$this->load->view('templates/footer');
-				}
+			}
 				
                 // Display an error message
                 //$this->load->view('login', ['error' => 'Invalid username or password.']);
-            }
+        }
         
+
 	}
 
 						
 		 
 	
-
 	
 
 	function registration()
@@ -359,11 +358,3 @@ class Frontend extends CI_Controller {
 		redirect(base_url('index.php/Frontend/login'));
 	}
 }
-
-
-
-
-
-
-
-
