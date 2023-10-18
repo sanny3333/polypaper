@@ -15,10 +15,10 @@
                                 <div class="site-footer__top-newsletter">
                                     <h5 class="site-footer__top-newsletter-title">Subsrcibe for Latest Articles and
                                         Resources</h5>
-                                    <form class="site-footer__top-newsletter-form">
+                                    <form class="site-footer__top-newsletter-form" action="<?php echo base_url();?>Welcome/send_email" method="post">
                                         <div class="site-footer__top-newsletter-input-box">
-                                            <input type="email" placeholder="Email Address" name="email">
-                                            <button type="submit" class="site-footer__top-newsletter-btn">Subsrcibe</button>
+                                            <input type="email" placeholder="Email Address" name="email" >
+                                            <button type="submit"   class="site-footer__top-newsletter-btn">Subsrcibe</button>
                                         </div>
                                     </form>
                                 </div>
@@ -161,7 +161,37 @@
     <script src="<?php echo base_url();?>/assets/vendors/timepicker/timePicker.js"></script>
 
 
+<!-- <script>
+    $(document).ready(function () {
+        $('#subscribe').click(function (e) {
+            e.preventDefault();
+            var email = $('#email').val();
 
+            $.ajax({
+                type: 'POST',
+                url: base_url + 'Welcome/send_email',
+                data: { email: email },
+                success: function (response) {
+                    if (response === 'success') {
+
+                        toastr.clear();
+                        Toast('Subscribed  succefully', "success", {
+                            position: "top-right",
+                            timeOut: "5000",
+                        });
+                        location.reload();
+                        // base_url("register");
+                       
+
+
+                    } else {
+                        toastr.error('Invalid username or password', 'Error');
+                    }
+                }
+            });
+        });
+    });
+</script> -->
 
     <!-- template js -->
     <script src="<?php echo base_url();?>/assets/js/conult.js"></script>
