@@ -175,7 +175,7 @@ class Frontend extends CI_Controller {
 			// $this->form_validation->set_rules('username','User Name','trim|required|alpha');
 			$this->form_validation->set_rules('username','Username','required|alpha');
 			// $this->form_validation->set_rules('email','Email','trim|required|valid_email|is_unique[reg.email]');
-			$this->form_validation->set_rules('email','Email','required');
+			$this->form_validation->set_rules('email','Email','required|valid_email|is_unique[users.email]');
 		
 			$this->form_validation->set_rules('mobile', 'Mobile Number', 'required|numeric'); 
 			// $this->form_validation->set_rules('password','Password','trim|required|sha1');
@@ -197,7 +197,7 @@ class Frontend extends CI_Controller {
 					'username'=>$this->input->post('username'),
 					'email'=>$this->input->post('email'),
 					'mobile'=>$this->input->post('mobile'),
-					'password' => password_hash($this->input->post('password'), PASSWORD_DEFAULT),
+					'password' => $hash_password,
 					'status'=>'1'
 				);
 
@@ -236,53 +236,48 @@ class Frontend extends CI_Controller {
 		 $this->load->library('form_validation');
 		 $this->load->helper('form');
         // Set the form validation rules
-        $this->form_validation->set_rules('email', 'Email', 'required');
+        $this->form_validation->set_rules('username', 'Username', 'required');
         $this->form_validation->set_rules('password', 'Password', 'required');
         // If the form validation fails
 		
         if ($this->form_validation->run() == FALSE) {
             // Display the login form
 			
-			$this->load->view('templates/header');
-			$this->load->view('login');
-			$this->load->view('templates/footer');
+			$data = array("status" => false, 'error' => 'form validation error.');
 			
         } else {
+
             // Validate the user's credentials
-            $email = $this->input->post('email');
+            $username = $this->input->post('username');
             $password = $this->input->post('password');
 			
             // Load the user model
             $this->load->model('User_model');
 			
             // Get the user's data
-            $user = $this->User_model->checkPassword($email,$password);
-			// print_r($user);
-			// die;
+            $user = $this->User_model->checkPassword($username,$password);
             // If the user exists and the password is correct
             if ($user) {
                 // Log the user in
 				
-				$this->load->view('templates/header');
-				$this->load->view('login', array('error' => 'Login successfully.'));
-				$this->load->view('templates/footer');
+				$data = array("status" => true, 'error' => 'Login successfully.');
+				
             } else {
 				
-					$this->load->view('templates/header');
-					$this->load->view('login', array('error' => 'Invalid username or password.'));
-					$this->load->view('templates/footer');
-				}
+				$data = array("status" => false, 'error' => 'Login successfully.');		
+			}
+
 				
                 // Display an error message
                 //$this->load->view('login', ['error' => 'Invalid username or password.']);
-            }
-		}
+        }
+		echo json_encode($data);
         
 
 						
 		 
 	
-
+	}
 	
 
 	function registration()

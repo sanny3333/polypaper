@@ -56,12 +56,12 @@
                         Login Now
                     </div>
                     <div class="card-body">
-                        <form method="post" autocomplete="off" action="<?php echo site_url();?>/frontend/loginNow">
+                        <form id='login-form' action="<?php echo base_url();?>Frontend/loginnow" method="post">
 
                             <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label">Email address</label>
-                                <input type="email" placeholder="Email Address" name="email" class="form-control"
-                                    id="exampleInputEmail1" aria-describedby="emailHelp" required />
+                                <label for="exampleInputEmail1" class="form-label">Username</label>
+                                <input type="text" placeholder="Enter Email or Username" name="username" class="form-control"
+                                    id="username" aria-describedby="emailHelp" required />
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputPassword" class="form-label">Password</label>
@@ -80,7 +80,7 @@
                             </div>
 
                             <?php if (isset($error)) : ?>
-                            <p style="color: red;"><?php echo $error; ?></p>
+                            <p id="errortext" style="text-align:center;" class="text-success"><?php echo $error; ?></p>
                             <?php endif; ?>
 
                         </form>
@@ -101,13 +101,12 @@
     </script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
+    
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-    -->
+   
 </body>
-
-</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script>
 var state = false;
 
@@ -124,37 +123,51 @@ function toggle() {
 }
 </script>
 <script>
-// JavaScript code to handle the login form submission via AJAX
-$(document).ready(function() {
-    $('#login-btn').on('submit', function(e) {
-        e.preventDefault();
-        var email = $('#exampleInputEmail1').val(); // Get the email input value
-        var password = $('#password').val(); // Get the password input value
+    let base_url = "<?php echo base_url()?>";
+    // JavaScript code to handle the login form submission via AJAX
+    $(document).ready(function () {
+        $('#login-form').submit(function (e) {
+            e.preventDefault();
+            var username = $('#username').val();
+            var password = $('#password').val();
 
-        $.ajax({
-            type: 'POST',
-            url: base_url + 'login', // Adjust this URL to your login endpoint
-            data: {
-                email: email,
-                password: password
-            },
-            success: function(response) {
-                if (response === 'success') {
-                    toastr.clear();
-                    Toast('Successfully login', 'success', {
-                        position: 'top-right',
-                        timeOut: '5000',
-                    });
-                    window.location.href =
-                        'http://localhost/polypaper/index.php/frontend/loginNow';
-                } else {
-                    toastr.error('Invalid email or password', 'Error');
+            $.ajax({
+                type: 'POST',
+                url: base_url + 'frontend/loginNow',
+                data: { username: username, password: password },
+                success: function (response) {
+                    response = JSON.parse(response)
+                    if (response.status) {
+                        // console.log("success")
+                        // toastr.clear();
+                        // Toast('Successfully login', "success", {
+                        //     position: "top-right",
+                        //     timeOut: "5000",
+                        // });
+                        alert("login success")
+                        window.location.href = "http://localhost/polypaper";
+                        // base_url("register");
+                       
+
+
+                    } else {
+                        // toastr.error('Invalid username or password', 'Error');
+                        alert("login error");
+                        console.log("error")
+                    }
                 }
-            },
-            error: function() {
+            })
+            error: function error() {
                 toastr.error('An error occurred during login', 'Error');
             }
         });
+
+        // let errortext=document.getElementById("errortext");
+        // setTimeout(() => {
+        //     errortext.classList.add("d-none")
+        // }, 2000);
+        
     });
-});
 </script>
+
+</html>
