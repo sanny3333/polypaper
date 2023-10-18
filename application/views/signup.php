@@ -77,7 +77,7 @@
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">Name</label>
                                 <input type="text" placeholder="User Name" name="username" class="form-control"
-                                    id="name" aria-describedby="name" pattern="[a-zA-Z]*" required maxlength="20"
+                                    id="name" aria-describedby="name" required maxlength="20"
                                     required minlength="3" required>
                             </div>
                             <div class="mb-3">
@@ -109,6 +109,9 @@
                                 <label for="exampleInputConfirmPassword" class="form-label">Confirm Password</label>
                                 <input type="password" name="confirm_password" placeholder="Confirm Password"
                                     class="form-control" id="confirm_password" required minlength="8" required>
+                                <span>
+                                    <i class="fa fa-eye" aria-hidden="true" id="eye" onclick="toggle()"></i>
+                                </span>
 
                             </div>
                             <div>
@@ -131,7 +134,8 @@
                                     <button type="submit" value="submit" class="btn btn-primary">Register Now</button>
                                 </div> -->
                                 <div class="text-center">
-                                    <button type="submit" value="submit" class="btn btn-primary" onclick="showSweetAlert()">Register
+                                    <button type="submit" value="submit" class="btn btn-primary"
+                                        onclick="showSweetAlert()">Register
                                         Now</button>
                                 </div>
 
@@ -141,24 +145,24 @@
 
                         </form>
                         <script>
-                        document.getElementById("signup-form").addEventListener("submit", function(evt) {
-
-                            var response = grecaptcha.getResponse();
-                            if (response.length == 0) {
-                                //reCaptcha not verified
-                                alert("please verify you are humann!");
-                                evt.preventDefault();
-                                return false;
-                            }
-                            //captcha verified
-                            //do the rest of your validations here
-
+                        document.addEventListener("DOMContentLoaded", function() {
+                            var form = document.querySelector("form");
+                            form.addEventListener("submit", function(event) {
+                                var captchaResponse = grecaptcha.getResponse();
+                                if (captchaResponse.length === 0) {
+                                    event.preventDefault(); // Prevent the form from submitting
+                                    alert("Please complete the reCAPTCHA.");
+                                }
+                            });
                         });
-                        </script>
-                        <script>
-                        function checkname(str) {
-                            return /\d/.test(str);
-                        }
+
+
+
+                        <
+                        script >
+                            function checkname(str) {
+                                return /\d/.test(str);
+                            }
 
                         function validateform() {
                             var name = document.forms["signup-form"]["username"].value;
@@ -168,11 +172,24 @@
                                 return false;
                             }
                         }
-                         
 
 
-                        
+
+                        var password = document.getElementById("password"),
+                            confirm_password = document.getElementById("confirm_password");
+
+                        function validatePassword() {
+                            if (password.value != confirm_password.value) {
+                                confirm_password.setCustomValidity("Passwords Don't Match");
+                            } else {
+                                confirm_password.setCustomValidity('');
+                            }
+                        }
+
+                        password.onchange = validatePassword;
+                        confirm_password.onkeyup = validatePassword;
                         </script>
+
 
                         <script type="text/javascript">
                         base_url = '<?php echo base_url(); ?>';
@@ -245,17 +262,25 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
-</script>
-<!-- alert popup -->
-<!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</Script>
 <script>
-function showSweetAlert() {
-    Swal.fire({
-        title: 'Registration successful!',
-        text: 'You have successfully registered.',
-        icon: 'success',
-        confirmButtonColor: '#3085d6',
-        confirmButtonText: 'OK'
+    // Use jQuery for AJAX, make sure jQuery is included in your HTML
+$(document).ready(function() {
+    $("#email").on("input", function() {
+        const email = $(this).val();
+        $.ajax({
+            type: "POST",
+            url: "check_email_availability.php", // Your server-side script
+            data: { email: email },
+            success: function(response) {
+                if (response === "unavailable") {
+                    $("#email-error").text("Email is already taken.");
+                } else {
+                    $("#email-error").text("");
+                }
+            }
+        });
     });
-} -->
-</script> 
+});
+
+</script>

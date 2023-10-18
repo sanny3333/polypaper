@@ -26,7 +26,7 @@
     .fa {
         font-size: 20px;
         color: #7a797e;
-       }
+    }
     </style>
 </head>
 
@@ -73,14 +73,14 @@
                             </div>
 
                             <div class="text-center">
-                                <button type="submit" class="btn btn-primary">Login Now</button>
+                                <button type="submit" id="login-btn" class="btn btn-primary">Login Now</button>
                             </div>
                             <div class="text-center">
                                 <a href="<?php echo site_url();?>/frontend/registration">Sign Up</a>
                             </div>
 
                             <?php if (isset($error)) : ?>
-                                <p style="color: red;"><?php echo $error; ?></p>
+                            <p style="color: red;"><?php echo $error; ?></p>
                             <?php endif; ?>
 
                         </form>
@@ -91,7 +91,7 @@
         </div>
     </div>
 
-		
+
 
     <!-- Optional JavaScript; choose one of the two! -->
 
@@ -124,22 +124,37 @@ function toggle() {
 }
 </script>
 <script>
-    $.ajax({
-    url: '/login',
-    type: 'POST',
-    data: {
-        username: $('#username').val(),
-        password: $('#password').val(),
-    },
-    success: function(response) {
-        if (response.status === 'success') {
-            // The user is logged in
-            window.location.href = '/login';
-        } else {
-            // The user credentials are invalid
-            window.location.href = '/index';
-           // alert(response.message);
-        }
-    }
+// JavaScript code to handle the login form submission via AJAX
+$(document).ready(function() {
+    $('#login-btn').on('submit', function(e) {
+        e.preventDefault();
+        var email = $('#exampleInputEmail1').val(); // Get the email input value
+        var password = $('#password').val(); // Get the password input value
+
+        $.ajax({
+            type: 'POST',
+            url: base_url + 'login', // Adjust this URL to your login endpoint
+            data: {
+                email: email,
+                password: password
+            },
+            success: function(response) {
+                if (response === 'success') {
+                    toastr.clear();
+                    Toast('Successfully login', 'success', {
+                        position: 'top-right',
+                        timeOut: '5000',
+                    });
+                    window.location.href =
+                        'http://localhost/polypaper/index.php/frontend/loginNow';
+                } else {
+                    toastr.error('Invalid email or password', 'Error');
+                }
+            },
+            error: function() {
+                toastr.error('An error occurred during login', 'Error');
+            }
+        });
+    });
 });
 </script>

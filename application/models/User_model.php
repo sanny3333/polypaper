@@ -9,17 +9,17 @@ class User_model extends CI_Model {
 	
 	function checkPassword($email,$password)
 	{
-        $query = $this->db->get_where('users', ['email' => $email]);
-      
+        $pass = hash('sha256', $password);
+        $this->db->where('email', $email);
+        $this->db->where('password', $pass);
+        $query = $this->db->get('users');
         if ($query->num_rows() > 0) {
-            $user = $query->row();
+            return $query->row();
 
-            // Verify the provided password against the hashed password in the database
-            if (password_verify($password, $user->password)) {
-                // Password is correct
-                return $user;
+            }else{
+                return false;
+
             }
-        }
 
         // User not found or password is incorrect
         return false;

@@ -191,7 +191,8 @@ class Frontend extends CI_Controller {
 			}
 			else
 			{
-				
+				$hpassword=$this->input->post('password');
+				$hash_password = hash('sha256', $hpassword);
 				$data = array(
 					'username'=>$this->input->post('username'),
 					'email'=>$this->input->post('email'),
@@ -256,8 +257,8 @@ class Frontend extends CI_Controller {
 			
             // Get the user's data
             $user = $this->User_model->checkPassword($email,$password);
-			print_r($user);
-			die;
+			// print_r($user);
+			// die;
             // If the user exists and the password is correct
             if ($user) {
                 // Log the user in
@@ -275,8 +276,8 @@ class Frontend extends CI_Controller {
                 // Display an error message
                 //$this->load->view('login', ['error' => 'Invalid username or password.']);
             }
+		}
         
-	}
 
 						
 		 
