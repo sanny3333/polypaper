@@ -224,9 +224,9 @@ class Frontend extends CI_Controller {
 					redirect(base_url('/Frontend/registerNow'));
 				}
 
-				//$this->load->model('user_model');
-				//$this->user_model->insertuser('reg',$data);
-				//$this->session->set_flashdata('success','Successfully User Created');
+				$this->load->model('user_model');
+				$this->user_model->insertuser('reg',$data);
+				$this->session->set_flashdata('success','Successfully User Created');
 				//redirect(base_url().'index.php/Frontend/login');
 			}
 		}
