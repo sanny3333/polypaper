@@ -179,7 +179,7 @@ class Frontend extends CI_Controller {
 			// $this->form_validation->set_rules('email','Email','trim|required|valid_email|is_unique[reg.email]');
 			$this->form_validation->set_rules('email','Email','required');
 		
-			$this->form_validation->set_rules('mobile', 'Mobile Number', 'required'); 
+			$this->form_validation->set_rules('mobile', 'Mobile', 'required'); 
 			// $this->form_validation->set_rules('password','Password','trim|required|sha1');
 			$this->form_validation->set_rules('password','Password','required');
 
@@ -259,6 +259,7 @@ class Frontend extends CI_Controller {
 			$this->load->view('templates/footer');
 			
         } else {
+
             // Validate the user's credentials
             $username = $this->input->post('username');
             $password = $this->input->post('password');
@@ -268,7 +269,7 @@ class Frontend extends CI_Controller {
 			
             // Get the user's data
             $user = $this->User_model->checkPassword($username,$password);
-
+//print_r($user);die()
             // If the user exists and the password is correct
             if ($user) {
                 // Log the user in
@@ -281,17 +282,17 @@ class Frontend extends CI_Controller {
 					$this->load->view('templates/header');
 					$this->load->view('login', array('error' => 'Invalid username or password.'));
 					$this->load->view('templates/footer');
-				}
+			}
 				
                 // Display an error message
                 //$this->load->view('login', ['error' => 'Invalid username or password.']);
-            }
+        }
         
 
 						
 		 
 	
-		}
+	}
 	
 
 	function registration()

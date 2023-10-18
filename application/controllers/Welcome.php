@@ -14,14 +14,14 @@ class Welcome extends CI_Controller {
         $this->form_validation->set_rules('email', 'Email', 'required');
         // If the form validation fails
 		
-        if ($this->form_validation->run() == FALSE) {
-            // Display the login form
+        // if ($this->form_validation->run() == FALSE) {
+        //     // Display the login form
 			
-			$this->load->view('templates/header');
-			$this->load->view('login');
-			$this->load->view('templates/footer');
+		// 	$this->load->view('templates/header');
+		// 	$this->load->view('login');
+		// 	$this->load->view('templates/footer');
 			
-        } else {
+        // } else {
             $email=$this->input->post('email');
             $data = array(
                 
@@ -32,12 +32,11 @@ class Welcome extends CI_Controller {
 			
             // Get the user's data
             $user = $this->Subscription_model->save_data($data);
-			
             // If the user exists and the password is correct
             if ($user) {
                 // Log the user in
 				$send=send_mail($email,"Thank you for subscribe to our website👍,visit again!!😊 & Thank you for choosing to stay connected with us.we're exicted to keep you informed and engaged with our website's content.If you have any question,feeback, or suggestions,please don't hesitate to reach out to us at[contact email]. we value your input and forward to serving you better.");
-		        echo"Subscribed";
+                redirect(base_url());
                 die();
 				
             } else {
@@ -46,7 +45,7 @@ class Welcome extends CI_Controller {
                     die();
 				}
 			
-            }
+            //}
 
        
 		
