@@ -2,7 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Frontend extends CI_Controller {
-	
+
 // Home =============>
 	public function index()
 	{
@@ -170,24 +170,24 @@ class Frontend extends CI_Controller {
 	function registerNow()
 	{
 
-		    $this->load->library('form_validation');
-		    $this->load->helper('form');
+		// print_r($this->input->post());
+		
+			$this->load->library('form_validation');
+			$this->load->helper('form');
 			// $this->form_validation->set_rules('username','User Name','trim|required|alpha');
-			$this->form_validation->set_rules('username','Username','required|alpha');
+			$this->form_validation->set_rules('username','Username','required');
 			// $this->form_validation->set_rules('email','Email','trim|required|valid_email|is_unique[reg.email]');
 			$this->form_validation->set_rules('email','Email','required');
 		
-			$this->form_validation->set_rules('mobile', 'Mobile Number', 'required|numeric'); 
+			$this->form_validation->set_rules('mobile', 'Mobile Number', 'required'); 
 			// $this->form_validation->set_rules('password','Password','trim|required|sha1');
 			$this->form_validation->set_rules('password','Password','required');
 
-
-			
-			if($this->form_validation->run()==FALSE)
+			if($this->form_validation->run()==TRUE)
 			{
-				$this->load->view('templates/header');
-				$this->load->view('signup');
-				$this->load->view('templates/footer');
+				echo"hhfddf";
+				die;
+				redirect(base_url('Frontend/login'));
 			}
 			else
 			{
@@ -200,6 +200,9 @@ class Frontend extends CI_Controller {
 					'password' => $hash_password,
 					'status'=>'1'
 				);
+				
+
+
 
 				$this->load->model('user_model');
 				$checking=$this->user_model->insertuser($data);
@@ -209,17 +212,23 @@ class Frontend extends CI_Controller {
 					$this->session->set_flashdata('error','Registered Successfully.! Go to login');
 					$this->load->view('templates/header');
 					$this->load->view('login');
-				$this->load->view('templates/footer');
+				    $this->load->view('templates/footer');
 				}
 				else
 				{
-					$this->session->set_flashdata('status','Something went wrong');
-					redirect(base_url('/Frontend/registerNow'));
+					$this->session->set_flashdata('error','Something went wrong');
+					$this->load->view('templates/header');
+					$this->load->view('login');
+				    $this->load->view('templates/footer');
+					
 				}
 
+				//$this->load->model('user_model');
+				//$this->user_model->insertuser('reg',$data);
+				//$this->session->set_flashdata('success','Successfully User Created');
+				//redirect(base_url().'index.php/Frontend/login');
 			}
 		
-				
 	}
 
 	function login()
@@ -232,6 +241,8 @@ class Frontend extends CI_Controller {
 
 	function loginnow()
 	{
+
+		
 		 // Validate the login form data
 		 $this->load->library('form_validation');
 		 $this->load->helper('form');
@@ -303,6 +314,12 @@ class Frontend extends CI_Controller {
 		session_destroy();
 		redirect(base_url('index.php/Frontend/login'));
 	}
-
-	
 }
+
+
+
+
+
+
+
+

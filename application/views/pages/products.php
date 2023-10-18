@@ -63,38 +63,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="d-flex justify-content-center mb-3">
-                    <a data-fslightbox="mygalley" class="border mx-2 rounded-2" target="_blank" data-type="image"
-                        href="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/detail1/big1.webp"
-                        class="item-thumb">
-                        <img width="60" height="60" class="rounded-2"
-                            src="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/detail1/big1.webp" />
-                    </a>
-                    <a data-fslightbox="mygalley" class="border mx-2 rounded-2" target="_blank" data-type="image"
-                        href="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/detail1/big2.webp"
-                        class="item-thumb">
-                        <img width="60" height="60" class="rounded-2"
-                            src="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/detail1/big2.webp" />
-                    </a>
-                    <a data-fslightbox="mygalley" class="border mx-2 rounded-2" target="_blank" data-type="image"
-                        href="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/detail1/big3.webp"
-                        class="item-thumb">
-                        <img width="60" height="60" class="rounded-2"
-                            src="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/detail1/big3.webp" />
-                    </a>
-                    <a data-fslightbox="mygalley" class="border mx-2 rounded-2" target="_blank" data-type="image"
-                        href="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/detail1/big4.webp"
-                        class="item-thumb">
-                        <img width="60" height="60" class="rounded-2"
-                            src="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/detail1/big4.webp" />
-                    </a>
-                    <a data-fslightbox="mygalley" class="border mx-2 rounded-2" target="_blank" data-type="image"
-                        href="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/detail1/big.webp"
-                        class="item-thumb">
-                        <img width="60" height="60" class="rounded-2"
-                            src="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/detail1/big.webp" />
-                    </a>
-                </div>
+                
                 <!-- thumbs-wrap.// -->
                 <!-- gallery-wrap .end// -->
             </aside>
@@ -132,9 +101,7 @@
 
                     <hr />
 
-                    <a href="#" class="btn btn-warning shadow-0"> Buy now </a>
-                    <a href="#" class="btn btn-primary shadow-0"> <i class="me-1 fa fa-shopping-basket"></i> Add to cart
-                    </a>
+                    
                 </div>
             </main>
         </div>
@@ -162,38 +129,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="d-flex justify-content-center mb-3">
-                    <a data-fslightbox="mygalley" class="border mx-1 rounded-2" target="_blank" data-type="image"
-                        href="https://4.imimg.com/data4/BK/HH/MY-24929159/pe-coated-paper-cup-blank-500x500.jpg"
-                        class="item-thumb">
-                        <img width="60" height="60" class="rounded-2"
-                            src="https://4.imimg.com/data4/BK/HH/MY-24929159/pe-coated-paper-cup-blank-500x500.jpg" />
-                    </a>
-                    <a data-fslightbox="mygalley" class="border mx-1 rounded-2" target="_blank" data-type="image"
-                        href="https://5.imimg.com/data5/OF/GL/MY-24929159/paper-cup-bottom-coil-500x500.jpg"
-                        class="item-thumb">
-                        <img width="60" height="60" class="rounded-2"
-                            src="https://5.imimg.com/data5/OF/GL/MY-24929159/paper-cup-bottom-coil-500x500.jpg" />
-                    </a>
-                    <a data-fslightbox="mygalley" class="border mx-1 rounded-2" target="_blank" data-type="image"
-                        href="https://5.imimg.com/data5/EY/NT/MY-24929159/plain-paper-cup-blanks-500x500.jpg"
-                        class="item-thumb">
-                        <img width="60" height="60" class="rounded-2"
-                            src="https://5.imimg.com/data5/EY/NT/MY-24929159/plain-paper-cup-blanks-500x500.jpg" />
-                    </a>
-                    <a data-fslightbox="mygalley" class="border mx-1 rounded-2" target="_blank" data-type="image"
-                        href="https://5.imimg.com/data5/SELLER/Default/2023/4/301613288/XW/RD/NF/107157285/pe-lamina3ted-cup-stock-paper-manufacturer-500x500.jpg"
-                        class="item-thumb">
-                        <img width="60" height="60" class="rounded-2"
-                            src="https://5.imimg.com/data5/SELLER/Default/2023/4/301613288/XW/RD/NF/107157285/pe-lamina3ted-cup-stock-paper-manufacturer-500x500.jpg" />
-                    </a>
-                    <a data-fslightbox="mygalley" class="border mx-1 rounded-2" target="_blank" data-type="image"
-                        href="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/detail1/big.webp"
-                        class="item-thumb">
-                        <img width="60" height="60" class="rounded-2"
-                            src="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/detail1/big.webp" />
-                    </a>
-                </div>
+                
                 <!-- thumbs-wrap.// -->
                 <!-- gallery-wrap .end// -->
             </aside>
@@ -232,9 +168,6 @@
 
                     <hr />
 
-                    <a href="#" class="btn btn-warning shadow-0"> Buy now </a>
-                    <a href="#" class="btn btn-primary shadow-0"> <i class="me-1 fa fa-shopping-basket"></i> Add to cart
-                    </a>
                 </div>
             </main>
         </div>
@@ -260,38 +193,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="d-flex justify-content-center mb-3">
-                    <a data-fslightbox="mygalley" class="border mx-1 rounded-2" target="_blank" data-type="image"
-                        href="https://4.imimg.com/data4/BK/HH/MY-24929159/pe-coated-paper-cup-blank-500x500.jpg"
-                        class="item-thumb">
-                        <img width="60" height="60" class="rounded-2"
-                            src="https://4.imimg.com/data4/BK/HH/MY-24929159/pe-coated-paper-cup-blank-500x500.jpg" />
-                    </a>
-                    <a data-fslightbox="mygalley" class="border mx-1 rounded-2" target="_blank" data-type="image"
-                        href="https://5.imimg.com/data5/OF/GL/MY-24929159/paper-cup-bottom-coil-500x500.jpg"
-                        class="item-thumb">
-                        <img width="60" height="60" class="rounded-2"
-                            src="https://5.imimg.com/data5/OF/GL/MY-24929159/paper-cup-bottom-coil-500x500.jpg" />
-                    </a>
-                    <a data-fslightbox="mygalley" class="border mx-1 rounded-2" target="_blank" data-type="image"
-                        href="https://5.imimg.com/data5/EY/NT/MY-24929159/plain-paper-cup-blanks-500x500.jpg"
-                        class="item-thumb">
-                        <img width="60" height="60" class="rounded-2"
-                            src="https://5.imimg.com/data5/EY/NT/MY-24929159/plain-paper-cup-blanks-500x500.jpg" />
-                    </a>
-                    <a data-fslightbox="mygalley" class="border mx-1 rounded-2" target="_blank" data-type="image"
-                        href="https://5.imimg.com/data5/SELLER/Default/2023/4/301613288/XW/RD/NF/107157285/pe-lamina3ted-cup-stock-paper-manufacturer-500x500.jpg"
-                        class="item-thumb">
-                        <img width="60" height="60" class="rounded-2"
-                            src="https://5.imimg.com/data5/SELLER/Default/2023/4/301613288/XW/RD/NF/107157285/pe-lamina3ted-cup-stock-paper-manufacturer-500x500.jpg" />
-                    </a>
-                    <a data-fslightbox="mygalley" class="border mx-1 rounded-2" target="_blank" data-type="image"
-                        href="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/detail1/big.webp"
-                        class="item-thumb">
-                        <img width="60" height="60" class="rounded-2"
-                            src="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/detail1/big.webp" />
-                    </a>
-                </div>
+                
                 <!-- thumbs-wrap.// -->
                 <!-- gallery-wrap .end// -->
             </aside>
@@ -330,9 +232,7 @@
 
                     <hr />
 
-                    <a href="#" class="btn btn-warning shadow-0"> Buy now </a>
-                    <a href="#" class="btn btn-primary shadow-0"> <i class="me-1 fa fa-shopping-basket"></i> Add to cart
-                    </a>
+                    
                 </div>
             </main>
         </div>
@@ -358,38 +258,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="d-flex justify-content-center mb-3">
-                    <a data-fslightbox="mygalley" class="border mx-1 rounded-2" target="_blank" data-type="image"
-                        href="https://4.imimg.com/data4/BK/HH/MY-24929159/pe-coated-paper-cup-blank-500x500.jpg"
-                        class="item-thumb">
-                        <img width="60" height="60" class="rounded-2"
-                            src="https://4.imimg.com/data4/BK/HH/MY-24929159/pe-coated-paper-cup-blank-500x500.jpg" />
-                    </a>
-                    <a data-fslightbox="mygalley" class="border mx-1 rounded-2" target="_blank" data-type="image"
-                        href="https://5.imimg.com/data5/OF/GL/MY-24929159/paper-cup-bottom-coil-500x500.jpg"
-                        class="item-thumb">
-                        <img width="60" height="60" class="rounded-2"
-                            src="https://5.imimg.com/data5/OF/GL/MY-24929159/paper-cup-bottom-coil-500x500.jpg" />
-                    </a>
-                    <a data-fslightbox="mygalley" class="border mx-1 rounded-2" target="_blank" data-type="image"
-                        href="https://5.imimg.com/data5/EY/NT/MY-24929159/plain-paper-cup-blanks-500x500.jpg"
-                        class="item-thumb">
-                        <img width="60" height="60" class="rounded-2"
-                            src="https://5.imimg.com/data5/EY/NT/MY-24929159/plain-paper-cup-blanks-500x500.jpg" />
-                    </a>
-                    <a data-fslightbox="mygalley" class="border mx-1 rounded-2" target="_blank" data-type="image"
-                        href="https://5.imimg.com/data5/SELLER/Default/2023/4/301613288/XW/RD/NF/107157285/pe-lamina3ted-cup-stock-paper-manufacturer-500x500.jpg"
-                        class="item-thumb">
-                        <img width="60" height="60" class="rounded-2"
-                            src="https://5.imimg.com/data5/SELLER/Default/2023/4/301613288/XW/RD/NF/107157285/pe-lamina3ted-cup-stock-paper-manufacturer-500x500.jpg" />
-                    </a>
-                    <a data-fslightbox="mygalley" class="border mx-1 rounded-2" target="_blank" data-type="image"
-                        href="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/detail1/big.webp"
-                        class="item-thumb">
-                        <img width="60" height="60" class="rounded-2"
-                            src="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/detail1/big.webp" />
-                    </a>
-                </div>
+                
                 <!-- thumbs-wrap.// -->
                 <!-- gallery-wrap .end// -->
             </aside>
@@ -428,9 +297,7 @@
 
                     <hr />
 
-                    <a href="#" class="btn btn-warning shadow-0"> Buy now </a>
-                    <a href="#" class="btn btn-primary shadow-0"> <i class="me-1 fa fa-shopping-basket"></i> Add to cart
-                    </a>
+                   
                 </div>
             </main>
         </div>
@@ -456,38 +323,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="d-flex justify-content-center mb-3">
-                    <a data-fslightbox="mygalley" class="border mx-1 rounded-2" target="_blank" data-type="image"
-                        href="https://4.imimg.com/data4/BK/HH/MY-24929159/pe-coated-paper-cup-blank-500x500.jpg"
-                        class="item-thumb">
-                        <img width="60" height="60" class="rounded-2"
-                            src="https://4.imimg.com/data4/BK/HH/MY-24929159/pe-coated-paper-cup-blank-500x500.jpg" />
-                    </a>
-                    <a data-fslightbox="mygalley" class="border mx-1 rounded-2" target="_blank" data-type="image"
-                        href="https://5.imimg.com/data5/OF/GL/MY-24929159/paper-cup-bottom-coil-500x500.jpg"
-                        class="item-thumb">
-                        <img width="60" height="60" class="rounded-2"
-                            src="https://5.imimg.com/data5/OF/GL/MY-24929159/paper-cup-bottom-coil-500x500.jpg" />
-                    </a>
-                    <a data-fslightbox="mygalley" class="border mx-1 rounded-2" target="_blank" data-type="image"
-                        href="https://5.imimg.com/data5/EY/NT/MY-24929159/plain-paper-cup-blanks-500x500.jpg"
-                        class="item-thumb">
-                        <img width="60" height="60" class="rounded-2"
-                            src="https://5.imimg.com/data5/EY/NT/MY-24929159/plain-paper-cup-blanks-500x500.jpg" />
-                    </a>
-                    <a data-fslightbox="mygalley" class="border mx-1 rounded-2" target="_blank" data-type="image"
-                        href="https://5.imimg.com/data5/SELLER/Default/2023/4/301613288/XW/RD/NF/107157285/pe-lamina3ted-cup-stock-paper-manufacturer-500x500.jpg"
-                        class="item-thumb">
-                        <img width="60" height="60" class="rounded-2"
-                            src="https://5.imimg.com/data5/SELLER/Default/2023/4/301613288/XW/RD/NF/107157285/pe-lamina3ted-cup-stock-paper-manufacturer-500x500.jpg" />
-                    </a>
-                    <a data-fslightbox="mygalley" class="border mx-1 rounded-2" target="_blank" data-type="image"
-                        href="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/detail1/big.webp"
-                        class="item-thumb">
-                        <img width="60" height="60" class="rounded-2"
-                            src="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/detail1/big.webp" />
-                    </a>
-                </div>
+                
                 <!-- thumbs-wrap.// -->
                 <!-- gallery-wrap .end// -->
             </aside>
@@ -526,9 +362,7 @@
 
                     <hr />
 
-                    <a href="#" class="btn btn-warning shadow-0"> Buy now </a>
-                    <a href="#" class="btn btn-primary shadow-0"> <i class="me-1 fa fa-shopping-basket"></i> Add to cart
-                    </a>
+            
                 </div>
             </main>
         </div>

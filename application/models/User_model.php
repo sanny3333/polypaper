@@ -4,7 +4,7 @@ class User_model extends CI_Model {
 
 	function insertuser($data)
 	{
-		return $this->db->insert('users',$data);
+		return $this->db->insert('reg',$data);
 	}
 	
 	function checkPassword($username,$password)
@@ -34,12 +34,5 @@ class User_model extends CI_Model {
         
 
 	}
-	public function lock_user($user_id, $duration = 300) {
-        $this->db->update('users', array('locked' => 1,'locked_until'=> time() + $duration), array('user_id' => $user_id));
-    }
 
-    public function unlock_expired_users() {
-        $this->db->where('locked_until <', time());
-        $this->db->update('users', array('locked' => 0));
-    }
 }

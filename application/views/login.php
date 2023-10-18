@@ -143,7 +143,7 @@ function toggle() {
                             position: "top-right",
                             timeOut: "5000",
                         });
-                        window.location.href = "http://localhost/polypaper";
+                        window.location.href = "http://localhost/polypaper/index.php/frontend/registration";
                         // base_url("register");
                        
 

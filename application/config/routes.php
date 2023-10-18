@@ -56,5 +56,8 @@ $route['translate_uri_dashes'] = FALSE;
 //login and register
 $route['login']='frontend/loginnow';
 $route['register']='frontend/registernow';
+$route['send_mail']='Welcome/send_email';
+$route['ajax/submit'] = 'AjaxController/submitData';
+
 
 // $route['test-test']='frontend/registernow';

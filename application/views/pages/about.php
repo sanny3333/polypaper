@@ -85,7 +85,7 @@
     <div class="container">
         <div class="section-title text-center">
             <span class="section-title__tagline">Some Experience</span>
-            <h2 class="section-title__title">What They’re Saying</h2>
+            <h2 class="section-title__title">What They're Saying</h2>
         </div>
         <div class="row">
             <div class="col-xl-12">

@@ -60,7 +60,7 @@ if(!empty($_SERVER['HTTP_HOST']))
     $domain = strtolower($_SERVER['HTTP_HOST']);
 
    if($domain='polypaper.org' || $domain='polypaper.io' ||  $domain='polypaper.net' || $domain='polypaper.world' || $domain='polypaperco.com' || $domain='polypaperusa.com') {
-    	define('ENVIRONMENT', 'production');
+    	define('ENVIRONMENT', 'development');
     }else{
     	define('ENVIRONMENT', 'development');
     }
