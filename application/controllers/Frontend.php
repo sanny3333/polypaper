@@ -183,9 +183,11 @@ class Frontend extends CI_Controller {
 			// $this->form_validation->set_rules('email','Email','trim|required|valid_email|is_unique[reg.email]');
 			$this->form_validation->set_rules('email','Email','required');
 		
-			$this->form_validation->set_rules('mobile', 'Mobile Number', 'required|numeric'); 
+			$this->form_validation->set_rules('phoneno', 'PhoneNo', 'required|numeric'); 
 			// $this->form_validation->set_rules('password','Password','trim|required|sha1');
 			$this->form_validation->set_rules('password','Password','required');
+			$this->form_validation->set_rules('confirmpassword','ConfirmPassword','required');
+
 
 			if($this->form_validation->run()==TRUE)
 			{
@@ -224,7 +226,7 @@ class Frontend extends CI_Controller {
 				}
 
 				$this->load->model('user_model');
-				$this->user_model->insertuser('reg',$data);
+				$this->user_model->insertuser('users',$data);
 				$this->session->set_flashdata('success','Successfully User Created');
 				//redirect(base_url().'index.php/Frontend/login');
 			}
