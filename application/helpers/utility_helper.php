@@ -21,7 +21,7 @@ function send_mail($to_email,$message) {
     $mail->setfrom("patilkirtiraj1617@gmail.com", "polypaper.org");
     $mail->addAddress($to_email);
     $mail->isHTML(true);
-    // $mail->Subject = $message;
+    $mail->Subject = "Go Green with Polypaper: Your Gateway to Sustainable Solutions"; 
     $mail->Body = $message;
     
 //print_r($mail->send());die();

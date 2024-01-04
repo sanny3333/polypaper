@@ -53,8 +53,32 @@ $route['default_controller'] = 'frontend';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
+
 //login and register
 $route['login']='frontend/loginnow';
 $route['register']='frontend/registernow';
 
-// $route['test-test']='frontend/registernow';
+// Admin panel
+$route['admin'] ='admin/index';
+$route['admin/logout'] ='admin/logout';
+$route['admin/users'] ='admin/users/view';
+$route['admin/users/add'] ='admin/users/add';
+$route['admin/users/delete/(:any)'] ='admin/users/delete/$1';
+$route['admin/contact'] ='admin/contact/view';
+$route['admin/contact/delete/(:any)'] ='admin/contact/delete/$1';
+$route['admin/admint'] ='admin/admin/view';
+$route['admin/admint/delete/(:any)'] ='admin/admin/delete/$1';
+$route['admin/subscription'] ='admin/subscription/view';
+$route['admin/subscription/delete/(:any)'] ='admin/subscription/delete/$1';
+$route['admin/product'] ='admin/product/view';
+$route['admin/order'] ='admin/order/view';
+$route['admin/order/delete/(:any)'] ='admin/order/delete/$1';
+
+$route['admin/profile'] ='admin/profile/view';
+$route['admin/profile/edit'] ='admin/profile/edit';
+$route['report/report'] ='report/report/view';
+$route['report/reportcontact'] ='report/reportcontact/view';
+$route['report/reportadmin'] ='report/reportadmin/view';
+$route['report/reportsubscription'] ='report/reportsubscription/view';
+$route['report/reportproduct'] ='report/reportproduct/view';
+$route['report/reportorder'] ='report/reportorder/view';

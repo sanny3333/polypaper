@@ -33,7 +33,7 @@
         position: absolute;
         right: 15px;
         transform: translate(0, -50%);
-        top: 50%;
+        top: 390px;
         cursor: pointer;
         margin-top: 26px;
         margin-right: 12px;
@@ -77,8 +77,8 @@
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">Name</label>
                                 <input type="text" placeholder="User Name" name="username" class="form-control"
-                                    id="name" aria-describedby="name" required maxlength="20"
-                                    required minlength="3" required>
+                                    id="name" aria-describedby="name" required maxlength="20" required minlength="3"
+                                    required>
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">Email address</label>
@@ -99,9 +99,9 @@
                                         class="form-control" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                                         required minlength="8" autocomplete="current-password" required>
                                     <span>
-                                        <i class="fa fa-eye" aria-hidden="true" id="eye" onclick="toggle()"></i>
+                                        <i class="fa fa-eye" aria-hidden="true" id="eye"
+                                            onclick="toggle('password')"></i>
                                     </span>
-
                                 </div>
                             </div>
 
@@ -110,10 +110,11 @@
                                 <input type="password" name="confirm_password" placeholder="Confirm Password"
                                     class="form-control" id="confirm_password" required minlength="8" required>
                                 <span>
-                                    <i class="fa fa-eye" aria-hidden="true" id="eye" onclick="toggle()"></i>
+                                    <i class="fa fa-eye" aria-hidden="true" id="eye"
+                                        onclick="toggle('confirm_password')"></i>
                                 </span>
-
                             </div>
+
                             <div>
                                 <div class="mb-3">
                                     <div class="mb-3">
@@ -174,25 +175,9 @@
                         }
 
 
-
-                        var password = document.getElementById("password"),
-                            confirm_password = document.getElementById("confirm_password");
-
-                        function validatePassword() {
-                            if (password.value != confirm_password.value) {
-                                confirm_password.setCustomValidity("Passwords Don't Match");
-                            } else {
-                                confirm_password.setCustomValidity('');
-                            }
-                        }
-
-                        password.onchange = validatePassword;
-                        confirm_password.onkeyup = validatePassword;
-                        </script>
-
-
-                        <script type="text/javascript">
-                        base_url = '<?php echo base_url(); ?>';
+                        <
+                        script type = "text/javascript" >
+                            base_url = '<?php echo base_url(); ?>';
                         $(document).ready(function() {
                             $('#signup-form').submit(function(event) {
                                 event.preventDefault();
@@ -230,6 +215,8 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
     <script src="cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
 
 
 
@@ -250,7 +237,26 @@ function toggle() {
         state = true;
     }
 }
+
+function validatePassword() {
+    var password = document.getElementById("password").value;
+    var confirm_password = document.getElementById("confirm_password").value;
+
+    if (password !== confirm_password) {
+        // Set a custom validation message
+        document.getElementById("confirm_password").setCustomValidity("Passwords Don't Match");
+    } else {
+        // Clear the custom validation message
+        document.getElementById("confirm_password").setCustomValidity('');
+    }
+}
+
+// Add an event listener to call validatePassword when the password or confirm_password fields change
+document.getElementById("password").addEventListener("input", validatePassword);
+document.getElementById("confirm_password").addEventListener("input", validatePassword);
 </script>
+
+
 <script>
 document.addEventListener("DOMContentLoaded", function() {
     var form = document.querySelector("form");
@@ -264,14 +270,16 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 </Script>
 <script>
-    // Use jQuery for AJAX, make sure jQuery is included in your HTML
+// Use jQuery for AJAX, make sure jQuery is included in your HTML
 $(document).ready(function() {
     $("#email").on("input", function() {
         const email = $(this).val();
         $.ajax({
             type: "POST",
             url: "check_email_availability.php", // Your server-side script
-            data: { email: email },
+            data: {
+                email: email
+            },
             success: function(response) {
                 if (response === "unavailable") {
                     $("#email-error").text("Email is already taken.");
@@ -282,5 +290,4 @@ $(document).ready(function() {
         });
     });
 });
-
 </script>

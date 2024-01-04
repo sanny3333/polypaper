@@ -60,8 +60,8 @@
 
                             <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">Username</label>
-                                <input type="text" placeholder="Enter Email or Username" name="username" class="form-control"
-                                    id="username" aria-describedby="emailHelp" required />
+                                <input type="text" placeholder="Enter Email or Username" name="username"
+                                    class="form-control" id="username" aria-describedby="emailHelp" required />
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputPassword" class="form-label">Password</label>
@@ -101,10 +101,14 @@
     </script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
-    
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-   
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
+    </script>
+
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script>
@@ -124,9 +128,9 @@ function toggle() {
 </script>
 <script>
     let base_url = "<?php echo base_url()?>";
-    // JavaScript code to handle the login form submission via AJAX
-    $(document).ready(function () {
-        $('#login-form').submit(function (e) {
+
+    $(document).ready(function() {
+        $('#login-form').submit(function(e) {
             e.preventDefault();
             var username = $('#username').val();
             var password = $('#password').val();
@@ -134,40 +138,27 @@ function toggle() {
             $.ajax({
                 type: 'POST',
                 url: base_url + 'frontend/loginNow',
-                data: { username: username, password: password },
-                success: function (response) {
-                    response = JSON.parse(response)
+                data: {
+                    username: username,
+                    password: password
+                },
+                success: function(response) {
+                    response = JSON.parse(response);
                     if (response.status) {
-                        // console.log("success")
-                        // toastr.clear();
-                        // Toast('Successfully login', "success", {
-                        //     position: "top-right",
-                        //     timeOut: "5000",
-                        // });
-                        alert("login success")
+                        alert("login success");
                         window.location.href = "http://localhost/polypaper";
-                        // base_url("register");
-                       
-
-
                     } else {
-                        // toastr.error('Invalid username or password', 'Error');
                         alert("login error");
-                        console.log("error")
+                        console.log("error");
                     }
+                },
+                error: function() { // Corrected the placement of the error function
+                    toastr.error('An error occurred during login', 'Error');
                 }
-            })
-            error: function error() {
-                toastr.error('An error occurred during login', 'Error');
-            }
+            });
         });
-
-        // let errortext=document.getElementById("errortext");
-        // setTimeout(() => {
-        //     errortext.classList.add("d-none")
-        // }, 2000);
-        
     });
 </script>
+
 
 </html>

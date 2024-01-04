@@ -15,32 +15,6 @@
 <!--Page Header End-->
 
 
-<!-- <div class="col-lg-5 col-md-12 col-12">
-    <div class="input-group float-center">
-        <div class="form-outline">
-            <input type="search" id="form1" class="form-control" />
-            <label class="form-label" for="form1">Search</label>
-        </div>
-        <button type="button" class="btn btn-primary shadow-0">
-            <i class="fas fa-search"></i>
-        </button>
-    </div>
-</div> -->
-<!-- Right elements -->
-
-<!-- Heading -->
-<!-- <div class="bg-primary">
-    <div class="container py-4">
-        <nav class="d-flex">
-            <h6 class="mb-0">
-                <a href="" class="text-white-50">Home</a>
-                <span class="text-white-50 mx-2"> > </span>
-                <a href="" class="text-white-50">Library</a>
-                <span class="text-white-50 mx-2"> > </span>
-                <a href="" class="text-white"><u>Data</u></a>
-            </h6>
-        </nav> -->
-
 
 
 
@@ -55,6 +29,7 @@
                             src="<?php echo base_url();?>/assets/images/product/product_3_card.jpg" />
                     </div>
 
+
                     <!-- Add the Read More arrow icon here -->
                     <div class="read-more-icon">
                         <a href="<?php echo site_url();?>/frontend/product3" class="news-one__btn">Read More</a>
@@ -62,41 +37,9 @@
                             <i class="icon-right-arrow"></i>
                         </a>
                     </div>
-                </div>
-                <div class="d-flex justify-content-center mb-3">
-                    <a data-fslightbox="mygalley" class="border mx-2 rounded-2" target="_blank" data-type="image"
-                        href="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/detail1/big1.webp"
-                        class="item-thumb">
-                        <img width="60" height="60" class="rounded-2"
-                            src="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/detail1/big1.webp" />
-                    </a>
-                    <a data-fslightbox="mygalley" class="border mx-2 rounded-2" target="_blank" data-type="image"
-                        href="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/detail1/big2.webp"
-                        class="item-thumb">
-                        <img width="60" height="60" class="rounded-2"
-                            src="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/detail1/big2.webp" />
-                    </a>
-                    <a data-fslightbox="mygalley" class="border mx-2 rounded-2" target="_blank" data-type="image"
-                        href="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/detail1/big3.webp"
-                        class="item-thumb">
-                        <img width="60" height="60" class="rounded-2"
-                            src="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/detail1/big3.webp" />
-                    </a>
-                    <a data-fslightbox="mygalley" class="border mx-2 rounded-2" target="_blank" data-type="image"
-                        href="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/detail1/big4.webp"
-                        class="item-thumb">
-                        <img width="60" height="60" class="rounded-2"
-                            src="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/detail1/big4.webp" />
-                    </a>
-                    <a data-fslightbox="mygalley" class="border mx-2 rounded-2" target="_blank" data-type="image"
-                        href="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/detail1/big.webp"
-                        class="item-thumb">
-                        <img width="60" height="60" class="rounded-2"
-                            src="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/detail1/big.webp" />
-                    </a>
-                </div>
-                <!-- thumbs-wrap.// -->
-                <!-- gallery-wrap .end// -->
+
+                    <!-- thumbs-wrap.// -->
+                    <!-- gallery-wrap .end// -->
             </aside>
             <main class="col-lg-6">
                 <div class="ps-lg-3">
@@ -130,12 +73,13 @@
                         <dd class="col-7">Platinum Poly Pack</dd>
                     </div>
 
-                    <hr />
 
-                   
+
+
                 </div>
             </main>
         </div>
+        <hr />
     </div>
 </section>
 <!-- content -->
@@ -154,46 +98,13 @@
 
                     <!-- Add the Read More arrow icon here -->
                     <div class="read-more-icon">
-                        <a href="<?php echo site_url();?>/frontend/product3" class="news-one__btn">Read More</a>
-                        <a href="<?php echo site_url();?>/frontend/product3">
+                        <a href="<?php echo site_url();?>/frontend/product4" class="news-one__btn">Read More</a>
+                        <a href="<?php echo site_url();?>/frontend/product4">
                             <i class="icon-right-arrow"></i>
                         </a>
                     </div>
-                </div>
-                <div class="d-flex justify-content-center mb-3">
-                    <a data-fslightbox="mygalley" class="border mx-1 rounded-2" target="_blank" data-type="image"
-                        href="https://4.imimg.com/data4/BK/HH/MY-24929159/pe-coated-paper-cup-blank-500x500.jpg"
-                        class="item-thumb">
-                        <img width="60" height="60" class="rounded-2"
-                            src="https://4.imimg.com/data4/BK/HH/MY-24929159/pe-coated-paper-cup-blank-500x500.jpg" />
-                    </a>
-                    <a data-fslightbox="mygalley" class="border mx-1 rounded-2" target="_blank" data-type="image"
-                        href="https://5.imimg.com/data5/OF/GL/MY-24929159/paper-cup-bottom-coil-500x500.jpg"
-                        class="item-thumb">
-                        <img width="60" height="60" class="rounded-2"
-                            src="https://5.imimg.com/data5/OF/GL/MY-24929159/paper-cup-bottom-coil-500x500.jpg" />
-                    </a>
-                    <a data-fslightbox="mygalley" class="border mx-1 rounded-2" target="_blank" data-type="image"
-                        href="https://5.imimg.com/data5/EY/NT/MY-24929159/plain-paper-cup-blanks-500x500.jpg"
-                        class="item-thumb">
-                        <img width="60" height="60" class="rounded-2"
-                            src="https://5.imimg.com/data5/EY/NT/MY-24929159/plain-paper-cup-blanks-500x500.jpg" />
-                    </a>
-                    <a data-fslightbox="mygalley" class="border mx-1 rounded-2" target="_blank" data-type="image"
-                        href="https://5.imimg.com/data5/SELLER/Default/2023/4/301613288/XW/RD/NF/107157285/pe-lamina3ted-cup-stock-paper-manufacturer-500x500.jpg"
-                        class="item-thumb">
-                        <img width="60" height="60" class="rounded-2"
-                            src="https://5.imimg.com/data5/SELLER/Default/2023/4/301613288/XW/RD/NF/107157285/pe-lamina3ted-cup-stock-paper-manufacturer-500x500.jpg" />
-                    </a>
-                    <a data-fslightbox="mygalley" class="border mx-1 rounded-2" target="_blank" data-type="image"
-                        href="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/detail1/big.webp"
-                        class="item-thumb">
-                        <img width="60" height="60" class="rounded-2"
-                            src="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/detail1/big.webp" />
-                    </a>
-                </div>
-                <!-- thumbs-wrap.// -->
-                <!-- gallery-wrap .end// -->
+                    <!-- thumbs-wrap.// -->
+                    <!-- gallery-wrap .end// -->
             </aside>
             <main class="col-lg-6">
                 <div class="ps-lg-3">
@@ -228,12 +139,12 @@
                         <dd class="col-7">Both Side Coated</dd>
                     </div>
 
-                    <hr />
 
-                    
+
                 </div>
             </main>
         </div>
+        <hr />
     </div>
 </section>
 <div class="container ptrn bdr18"></div>
@@ -250,43 +161,11 @@
 
                     <!-- Add the Read More arrow icon here -->
                     <div class="read-more-icon">
-                        <a href="<?php echo site_url();?>/frontend/product3" class="news-one__btn">Read More</a>
-                        <a href="<?php echo site_url();?>/frontend/product3">
+                        <a href="<?php echo site_url();?>/frontend/product2" class="news-one__btn">Read More</a>
+                        <a href="<?php echo site_url();?>/frontend/product2">
                             <i class="icon-right-arrow"></i>
                         </a>
                     </div>
-                </div>
-                <div class="d-flex justify-content-center mb-3">
-                    <a data-fslightbox="mygalley" class="border mx-1 rounded-2" target="_blank" data-type="image"
-                        href="https://4.imimg.com/data4/BK/HH/MY-24929159/pe-coated-paper-cup-blank-500x500.jpg"
-                        class="item-thumb">
-                        <img width="60" height="60" class="rounded-2"
-                            src="https://4.imimg.com/data4/BK/HH/MY-24929159/pe-coated-paper-cup-blank-500x500.jpg" />
-                    </a>
-                    <a data-fslightbox="mygalley" class="border mx-1 rounded-2" target="_blank" data-type="image"
-                        href="https://5.imimg.com/data5/OF/GL/MY-24929159/paper-cup-bottom-coil-500x500.jpg"
-                        class="item-thumb">
-                        <img width="60" height="60" class="rounded-2"
-                            src="https://5.imimg.com/data5/OF/GL/MY-24929159/paper-cup-bottom-coil-500x500.jpg" />
-                    </a>
-                    <a data-fslightbox="mygalley" class="border mx-1 rounded-2" target="_blank" data-type="image"
-                        href="https://5.imimg.com/data5/EY/NT/MY-24929159/plain-paper-cup-blanks-500x500.jpg"
-                        class="item-thumb">
-                        <img width="60" height="60" class="rounded-2"
-                            src="https://5.imimg.com/data5/EY/NT/MY-24929159/plain-paper-cup-blanks-500x500.jpg" />
-                    </a>
-                    <a data-fslightbox="mygalley" class="border mx-1 rounded-2" target="_blank" data-type="image"
-                        href="https://5.imimg.com/data5/SELLER/Default/2023/4/301613288/XW/RD/NF/107157285/pe-lamina3ted-cup-stock-paper-manufacturer-500x500.jpg"
-                        class="item-thumb">
-                        <img width="60" height="60" class="rounded-2"
-                            src="https://5.imimg.com/data5/SELLER/Default/2023/4/301613288/XW/RD/NF/107157285/pe-lamina3ted-cup-stock-paper-manufacturer-500x500.jpg" />
-                    </a>
-                    <a data-fslightbox="mygalley" class="border mx-1 rounded-2" target="_blank" data-type="image"
-                        href="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/detail1/big.webp"
-                        class="item-thumb">
-                        <img width="60" height="60" class="rounded-2"
-                            src="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/detail1/big.webp" />
-                    </a>
                 </div>
                 <!-- thumbs-wrap.// -->
                 <!-- gallery-wrap .end// -->
@@ -295,8 +174,7 @@
                 <div class="ps-lg-3">
                     <h4 class="title text-dark">
 
-                        Paper cups
-                    </h4>
+                        Poly Coated Paper For Sugar Sachets Exporter </h4>
 
                     <!-- <div class="mb-3">
                         <span class="h5">$75.00</span>
@@ -304,32 +182,29 @@
                     </div> -->
 
                     <p>
-                        A range of various boards such as puA paper cup is a disposable cup made out of paper and often
-                        lined or coated with plastic or wax to prevent liquid from leaking out or soaking through the
-                        paper. It may be made of recycled paper and is widely used around the world.
+                        We are engaged in providing a range of high quality sugar free boxes that is extensively used in
+                        packing applications of various industries such as Pharmaceuticals etc. Appreciated for their
+                        thickness, these can add value to the product packed, by extending its service life.
 
                     </p>
 
                     <div class="row">
                         <dt class="col-4">Product Type:</dt>
-                        <dd class="col-7">Roll</dd>
+                        <dd class="col-7">Packets</dd>
 
                         <dt class="col-4">Color:</dt>
-                        <dd class="col-7">White,Brown</dd>
-
-                        <dt class="col-4">GSM:</dt>
-                        <dd class="col-7">140-250</dd>
+                        <dd class="col-7">Brown</dd>
 
                         <dt class="col-4">PE Coated:</dt>
                         <dd class="col-7">Both Side Coated</dd>
                     </div>
 
-                    <hr />
 
-                   
+
                 </div>
             </main>
         </div>
+        <hr />
     </div>
 </section>
 <div class="container ptrn bdr18"></div>
@@ -346,44 +221,13 @@
 
                     <!-- Add the Read More arrow icon here -->
                     <div class="read-more-icon">
-                        <a href="<?php echo site_url();?>/frontend/product3" class="news-one__btn">Read More</a>
-                        <a href="<?php echo site_url();?>/frontend/product3">
+                        <a href="<?php echo site_url();?>/frontend/product1" class="news-one__btn">Read More</a>
+                        <a href="<?php echo site_url();?>/frontend/product1">
                             <i class="icon-right-arrow"></i>
                         </a>
                     </div>
                 </div>
-                <div class="d-flex justify-content-center mb-3">
-                    <a data-fslightbox="mygalley" class="border mx-1 rounded-2" target="_blank" data-type="image"
-                        href="https://4.imimg.com/data4/BK/HH/MY-24929159/pe-coated-paper-cup-blank-500x500.jpg"
-                        class="item-thumb">
-                        <img width="60" height="60" class="rounded-2"
-                            src="https://4.imimg.com/data4/BK/HH/MY-24929159/pe-coated-paper-cup-blank-500x500.jpg" />
-                    </a>
-                    <a data-fslightbox="mygalley" class="border mx-1 rounded-2" target="_blank" data-type="image"
-                        href="https://5.imimg.com/data5/OF/GL/MY-24929159/paper-cup-bottom-coil-500x500.jpg"
-                        class="item-thumb">
-                        <img width="60" height="60" class="rounded-2"
-                            src="https://5.imimg.com/data5/OF/GL/MY-24929159/paper-cup-bottom-coil-500x500.jpg" />
-                    </a>
-                    <a data-fslightbox="mygalley" class="border mx-1 rounded-2" target="_blank" data-type="image"
-                        href="https://5.imimg.com/data5/EY/NT/MY-24929159/plain-paper-cup-blanks-500x500.jpg"
-                        class="item-thumb">
-                        <img width="60" height="60" class="rounded-2"
-                            src="https://5.imimg.com/data5/EY/NT/MY-24929159/plain-paper-cup-blanks-500x500.jpg" />
-                    </a>
-                    <a data-fslightbox="mygalley" class="border mx-1 rounded-2" target="_blank" data-type="image"
-                        href="https://5.imimg.com/data5/SELLER/Default/2023/4/301613288/XW/RD/NF/107157285/pe-lamina3ted-cup-stock-paper-manufacturer-500x500.jpg"
-                        class="item-thumb">
-                        <img width="60" height="60" class="rounded-2"
-                            src="https://5.imimg.com/data5/SELLER/Default/2023/4/301613288/XW/RD/NF/107157285/pe-lamina3ted-cup-stock-paper-manufacturer-500x500.jpg" />
-                    </a>
-                    <a data-fslightbox="mygalley" class="border mx-1 rounded-2" target="_blank" data-type="image"
-                        href="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/detail1/big.webp"
-                        class="item-thumb">
-                        <img width="60" height="60" class="rounded-2"
-                            src="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/detail1/big.webp" />
-                    </a>
-                </div>
+
                 <!-- thumbs-wrap.// -->
                 <!-- gallery-wrap .end// -->
             </aside>
@@ -391,7 +235,8 @@
                 <div class="ps-lg-3">
                     <h4 class="title text-dark">
 
-                        Paper cups
+                        PE Coated Paper
+
                     </h4>
 
                     <!-- <div class="mb-3">
@@ -400,9 +245,10 @@
                     </div> -->
 
                     <p>
-                        A range of various boards such as puA paper cup is a disposable cup made out of paper and often
-                        lined or coated with plastic or wax to prevent liquid from leaking out or soaking through the
-                        paper. It may be made of recycled paper and is widely used around the world.
+                        Using the right materials for packaging plays a major role in ensuring that the customers
+                        receive
+                        goods with the best possible presentation. PE Coated Paper is layered with polyethylene,
+                        providing a very strong moisture and grease barrier.
 
                     </p>
 
@@ -410,22 +256,21 @@
                         <dt class="col-4">Product Type:</dt>
                         <dd class="col-7">Roll</dd>
 
-                        <dt class="col-4">Color:</dt>
-                        <dd class="col-7">White,Brown</dd>
+                        <dt class="col-4">Types:</dt>
+                        <dd class="col-7"> Chromo PE Coated paper</dd>
 
                         <dt class="col-4">GSM:</dt>
-                        <dd class="col-7">140-250</dd>
+                        <dd class="col-7">70-120</dd>
 
                         <dt class="col-4">PE Coated:</dt>
                         <dd class="col-7">Both Side Coated</dd>
                     </div>
 
-                    <hr />
 
-                    
                 </div>
             </main>
         </div>
+        <hr />
     </div>
 </section>
 <div class="container ptrn bdr18"></div>
@@ -442,52 +287,21 @@
 
                     <!-- Add the Read More arrow icon here -->
                     <div class="read-more-icon">
-                        <a href="<?php echo site_url();?>/frontend/product3" class="news-one__btn">Read More</a>
-                        <a href="<?php echo site_url();?>/frontend/product3">
+                        <a href="<?php echo site_url();?>/frontend/product5" class="news-one__btn">Read More</a>
+                        <a href="<?php echo site_url();?>/frontend/product5">
                             <i class="icon-right-arrow"></i>
                         </a>
                     </div>
-                </div>
-                <div class="d-flex justify-content-center mb-3">
-                    <a data-fslightbox="mygalley" class="border mx-1 rounded-2" target="_blank" data-type="image"
-                        href="https://4.imimg.com/data4/BK/HH/MY-24929159/pe-coated-paper-cup-blank-500x500.jpg"
-                        class="item-thumb">
-                        <img width="60" height="60" class="rounded-2"
-                            src="https://4.imimg.com/data4/BK/HH/MY-24929159/pe-coated-paper-cup-blank-500x500.jpg" />
-                    </a>
-                    <a data-fslightbox="mygalley" class="border mx-1 rounded-2" target="_blank" data-type="image"
-                        href="https://5.imimg.com/data5/OF/GL/MY-24929159/paper-cup-bottom-coil-500x500.jpg"
-                        class="item-thumb">
-                        <img width="60" height="60" class="rounded-2"
-                            src="https://5.imimg.com/data5/OF/GL/MY-24929159/paper-cup-bottom-coil-500x500.jpg" />
-                    </a>
-                    <a data-fslightbox="mygalley" class="border mx-1 rounded-2" target="_blank" data-type="image"
-                        href="https://5.imimg.com/data5/EY/NT/MY-24929159/plain-paper-cup-blanks-500x500.jpg"
-                        class="item-thumb">
-                        <img width="60" height="60" class="rounded-2"
-                            src="https://5.imimg.com/data5/EY/NT/MY-24929159/plain-paper-cup-blanks-500x500.jpg" />
-                    </a>
-                    <a data-fslightbox="mygalley" class="border mx-1 rounded-2" target="_blank" data-type="image"
-                        href="https://5.imimg.com/data5/SELLER/Default/2023/4/301613288/XW/RD/NF/107157285/pe-lamina3ted-cup-stock-paper-manufacturer-500x500.jpg"
-                        class="item-thumb">
-                        <img width="60" height="60" class="rounded-2"
-                            src="https://5.imimg.com/data5/SELLER/Default/2023/4/301613288/XW/RD/NF/107157285/pe-lamina3ted-cup-stock-paper-manufacturer-500x500.jpg" />
-                    </a>
-                    <a data-fslightbox="mygalley" class="border mx-1 rounded-2" target="_blank" data-type="image"
-                        href="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/detail1/big.webp"
-                        class="item-thumb">
-                        <img width="60" height="60" class="rounded-2"
-                            src="https://bootstrap-ecommerce.com/bootstrap5-ecommerce/images/items/detail1/big.webp" />
-                    </a>
-                </div>
-                <!-- thumbs-wrap.// -->
-                <!-- gallery-wrap .end// -->
+
+                    <!-- thumbs-wrap.// -->
+                    <!-- gallery-wrap .end// -->
             </aside>
             <main class="col-lg-6">
                 <div class="ps-lg-3">
                     <h4 class="title text-dark">
 
-                        Paper cups
+                        Cover rolls
+
                     </h4>
 
                     <!-- <div class="mb-3">
@@ -496,9 +310,8 @@
                     </div> -->
 
                     <p>
-                        A range of various boards such as puA paper cup is a disposable cup made out of paper and often
-                        lined or coated with plastic or wax to prevent liquid from leaking out or soaking through the
-                        paper. It may be made of recycled paper and is widely used around the world.
+                        School and Notebook Cover Stretchable Binding Cover Roll
+
 
                     </p>
 
@@ -507,23 +320,82 @@
                         <dd class="col-7">Roll</dd>
 
                         <dt class="col-4">Color:</dt>
-                        <dd class="col-7">White,Brown</dd>
-
-                        <dt class="col-4">GSM:</dt>
-                        <dd class="col-7">140-250</dd>
+                        <dd class="col-7">White,Brown,Gary</dd>
 
                         <dt class="col-4">PE Coated:</dt>
                         <dd class="col-7">Both Side Coated</dd>
                     </div>
 
-                    <hr />
 
-                    
                 </div>
             </main>
         </div>
+        <hr />
     </div>
 </section>
+<div class="container ptrn bdr18"></div>
+
+<section class="py-5" data-wow-delay="200ms">
+    <div class="container">
+        <div class="row gx-5">
+            <aside class="col-lg-6">
+                <div class="border rounded-4 mb-3 d-flex justify-content-center">
+                    <div class="image-container">
+                        <img style="max-width: 100%; max-height: 100vh; margin: auto;" class="rounded-4 fit"
+                            src="<?php echo base_url();?>/assets/images/product/product_6.jpg" />
+                    </div>
+
+                    <!-- Add the Read More arrow icon here -->
+                    <div class="read-more-icon">
+                        <a href="<?php echo site_url();?>/frontend/product6" class="news-one__btn">Read More</a>
+                        <a href="<?php echo site_url();?>/frontend/product6">
+                            <i class="icon-right-arrow"></i>
+                        </a>
+                    </div>
+
+                    <!-- thumbs-wrap.// -->
+                    <!-- gallery-wrap .end// -->
+            </aside>
+            <main class="col-lg-6">
+                <div class="ps-lg-3">
+                    <h4 class="title text-dark">
+
+                        Envelopes
+
+                    </h4>
+
+                    <!-- <div class="mb-3">
+                        <span class="h5">$75.00</span>
+                        <span class="text-muted">/per box</span>
+                    </div> -->
+
+                    <p>
+                        An envelope is a common packaging item, usually made of thin, flat material. It is designed to
+                        contain a flat object, such as a letter or card.
+
+
+                    </p>
+
+                    <div class="row">
+                        <dt class="col-4">Product Type:</dt>
+                        <dd class="col-7">Envelopes</dd>
+
+                        <dt class="col-4">Color:</dt>
+                        <dd class="col-7">Available in different Colours</dd>
+
+                        <dt class="col-4">PE Coated:</dt>
+                        <dd class="col-7">Both Side Coated</dd>
+                    </div>
+
+
+                </div>
+            </main>
+        </div>
+        <hr />
+    </div>
+</section>
+
+
 
 <style>
 .icon-hover:hover {

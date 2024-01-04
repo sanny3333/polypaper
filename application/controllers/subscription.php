@@ -1,3 +1,4 @@
+<?php
 // controllers/SubscriptionController.php
 
 class SubscriptionController extends CI_Controller {
@@ -35,3 +36,4 @@ class SubscriptionController extends CI_Controller {
         // You can use libraries like PHPMailer or built-in email functions
     }
 }
+?>
